@@ -18,17 +18,17 @@
 
 / {
     macros {
-        speak: speak {
-            compatible = "zmk,behavior-macro";
-            label = "SPEAK";
-            #binding-cells = <0>;
-            bindings = <&kp LALT &kp ESCAPE>;
-        };
         email: email {
             compatible = "zmk,behavior-macro";
             label = "EMAIL";
             #binding-cells = <0>;
             bindings = <&kp A &kp K &kp AT &kp A &kp L &kp I &kp K &kp A &kp R &kp A &kp M &kp DOT &kp C &kp O &kp M>;
+        };
+        speak: speak {
+            compatible = "zmk,behavior-macro";
+            label = "SPEAK";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp ESCAPE>;
         };
         scr_shot: scr_shot {
             compatible = "zmk,behavior-macro";
