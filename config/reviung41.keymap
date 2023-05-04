@@ -78,8 +78,6 @@
 &trans    &kp ESC  &kp LGUI   &kp LALT           &kp CLCK  &kp UNDER             &kp NUMBER_0        &kp N1  &kp NUMBER_2  &kp NUMBER_3    &kp DOT  &mt RSHFT RET
                                 &trans             &trans             &kp SPACE                       &mo 3        &trans
             >;
-
-            label = "LOWER";
         };
 
         raise_layer {
@@ -95,8 +93,6 @@
 &trans  &kp ESC  &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp TILDE               &none  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp C_PLAY_PAUSE    &none
                                       &trans                  &mo 3             &kp BSPC                  &trans        &trans
             >;
-
-            label = "RAISE";
         };
 
         adjust_layer {
@@ -112,8 +108,6 @@
           &none            &none            &none            &none   &none            &mo 4              &arabic         &none         &none         &none         &none       &none
                                                             &trans  &trans                   &none                      &trans        &trans
             >;
-
-            label = "ADJ";
         };
 
         function_layer {
@@ -129,8 +123,6 @@
 &none  &none  &none   &none   &none  &none         &trans  &kp F9  &kp F10  &kp F11  &kp F12  &none
                      &trans  &trans         &none          &trans   &trans
             >;
-
-            label = "FUN";
         };
 
         arabic_layer {
@@ -140,8 +132,6 @@
 &kp LSHFT  &kp Z  &kp X     &kp C  &kp V  &kp B             &kp N  &kp M  &kp COMMA  &kp DOT          &kp FSLH            &kp RET
                          &kp LALT  &mo 1         &kp SPACE         &mo 2   &kp RGUI
             >;
-
-            label = "ARA";
         };
     };
 };
