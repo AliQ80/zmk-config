@@ -9,6 +9,13 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define ADJ     3
+#define FUN     4
+#define ARA     5
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -21,10 +28,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-  &kp TAB  &kp Q  &kp W     &kp F  &kp P  &kp B             &kp J  &kp L    &kp U      &kp Y    &kp SEMI   &kp BSPC
-&kp LCTRL  &kp A  &kp R     &kp S  &kp T  &kp G             &kp M  &kp N    &kp E      &kp I    &kp O      &kp SQT
-&kp LSHFT  &kp Z  &kp X     &kp C  &kp D  &kp V             &kp K  &kp H    &kp COMMA  &kp DOT  &kp FSLH   &mt RSHFT RET
-                         &kp LALT  &mo 1         &kp SPACE         &mo 2    &kp RGUI
+&kp TAB    &kp Q  &kp W     &kp F  &kp P      &kp B             &kp J  &kp L        &kp U      &kp Y    &kp SEMI   &kp BSPC
+&kp LCTRL  &kp A  &kp R     &kp S  &kp T      &kp G             &kp M  &kp N        &kp E      &kp I    &kp O      &kp SQT
+&kp LSHFT  &kp Z  &kp X     &kp C  &kp D      &kp V             &kp K  &kp H        &kp COMMA  &kp DOT  &kp FSLH   &mt RSHFT RET
+                         &kp LALT  &mo LOWER         &kp SPACE         &mo RAISE    &kp RGUI
             >;
         };
 
@@ -38,13 +45,13 @@
             bindings = <
 &trans   &kp EXCL    &kp AT    &kp HASH  &kp DLLR   &kp PRCNT         &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp MINUS   &kp DEL
 &trans   &kp UNDER   &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE          &kp ASTRK     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp PLUS    &kp EQUAL
-&trans   &kp ESC     &kp LGUI  &kp LALT  &kp CLCK   &kp DQT           &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp DOT     &mt RSHFT SPACE
-                               &trans    &trans             &kp RET                  &mo 3        &trans
+&trans   &kp ESC     &kp LGUI  &kp LALT  &kp CLCK   &kp DQT           &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp DOT     &mt RSHFT RET
+                               &trans    &trans             &kp SPACE               &mo ADJ       &trans
             >;
         };
 
         raise_layer {
-            // ----------------------------------------------------------------------------
+            // --------------------------------------------------------------------------------------------
             // |    |  1  |  2  |  3  |  4  |  5  |   |        |   7   |   UP    |   9    |   0   |  DEL  |
             // |    |  -  |  =  |  [  |  ]  |  \  |   |  HOME  |  LFT  |   DWN   |  RGT   |  END  |  F6   |
             // |    | ESC | GUI | ALT | CAPS|  "  |   |        | VOLUP |  VOLDN  |  MUTE  |       |       |
@@ -54,12 +61,12 @@
 &trans   &kp N1     &kp N2     &kp N3    &kp N4     &kp N5            &none     &kp N7        &kp UP        &none       &none     &kp DEL
 &trans   &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH          &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END   &kp F6
 &trans   &kp ESC    &kp LGUI   &kp RALT  &kp CLCK   &kp DQT           &none     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &none     &none
-                               &trans    &mo 3              &kp BSPC            &trans        &trans
+                               &trans    &mo ADJ            &kp BSPC            &trans        &trans
             >;
         };
 
         adjust_layer {
-            // -----------------------------------------------------------------------------------------
+            // ---------------------------------------------------------------------------------------------------------
             // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
             // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |       |     |     |     |     |        |
             // |          |          |          |          |    |         |   |       |     |     |     |     |        |
@@ -68,8 +75,23 @@
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &none  &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR   &none            &none          &none         &none         &none         &none         &none         &none
-&none            &none            &none            &none             &none            &none          &none         &none         &none         &none         &none         &none
+&none            &none            &none            &none             &none            &none          &mo ADJ         &none         &none         &none         &none         &none
                                                     &trans           &trans                   &tog 3               &trans        &trans
+            >;
+        };
+        
+        function_layer {
+            // ---------------------------------------------------------------------------------------------------------
+            // |  | F1 | F2  | F3  |  F4   |     |          |     |     |   |   |   |   |
+            // |  | F5 | F6  | F7  |  F8   |     |          |     |     |   |   |   |   |
+            // |  | F9 | F10 | F11 |  F12  |     |          |     |     |   |   |   |   |
+            //                     |       |     |          |     |     |
+
+            bindings = <
+&none    &kp F6   &kp F6   &kp F6    &kp F6    &none          &none    &none    &none  &none   &none   &none
+&none    &kp F6   &kp F6   &kp F6    &kp F6    &none          &none    &none    &none  &none   &none   &none
+&none    &kp F6   &kp F6   &kp F6    &kp F6    &none          &trans   &none    &none  &none   &none   &none
+                           &trans    &trans           &none            &trans   &trans
             >;
         };
     };
