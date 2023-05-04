@@ -15,16 +15,16 @@
 
         default_layer {
             // -------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BKSP    |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT(RET) |
+            // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |   BKSP    |
+            // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
+            // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | SHFT(RET) |
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-  &kp TAB  &kp Q  &kp W     &kp F  &kp P  &kp B             &kp J  &kp L      &kp U    &kp Y  &kp SEMI       &kp BSPC
-&kp LCTRL  &kp A  &kp R     &kp S  &kp T  &kp G             &kp M  &kp N      &kp E    &kp I     &kp O        &kp SQT
-&kp LSHFT  &kp Z  &kp X     &kp C  &kp D  &kp V             &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                         &kp LALT  &mo 1         &kp SPACE         &mo 2   &kp RGUI
+  &kp TAB  &kp Q  &kp W     &kp F  &kp P  &kp B             &kp J  &kp L    &kp U      &kp Y    &kp SEMI   &kp BSPC
+&kp LCTRL  &kp A  &kp R     &kp S  &kp T  &kp G             &kp M  &kp N    &kp E      &kp I    &kp O      &kp SQT
+&kp LSHFT  &kp Z  &kp X     &kp C  &kp D  &kp V             &kp K  &kp H    &kp COMMA  &kp DOT  &kp FSLH   &mt RSHFT RET
+                         &kp LALT  &mo 1         &kp SPACE         &mo 2    &kp RGUI
             >;
         };
 
@@ -36,25 +36,25 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-&trans   &kp EXCL    &kp AT  &kp HASH  &kp DLLR  &kp PRCNT              &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS          &kp DEL
-&trans  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp PLUS        &kp EQUAL
-&trans    &kp ESC  &kp LGUI  &kp LALT  &kp CLCK    &kp DQT           &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp DOT  &mt RSHFT SPACE
-                               &trans    &trans             &kp RET                       &mo 3        &trans
+&trans   &kp EXCL    &kp AT    &kp HASH  &kp DLLR   &kp PRCNT         &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp MINUS   &kp DEL
+&trans   &kp UNDER   &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE          &kp ASTRK     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp PLUS    &kp EQUAL
+&trans   &kp ESC     &kp LGUI  &kp LALT  &kp CLCK   &kp DQT           &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp DOT     &mt RSHFT SPACE
+                               &trans    &trans             &kp RET                  &mo 3        &trans
             >;
         };
 
         raise_layer {
             // ----------------------------------------------------------------------------
-            // |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
-            // |    |  -  |  =  |  [  |  ]  |  \  |   | F1  | F2  | F3  | F4  | F5  | F6  |
-            // |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
+            // |    |  1  |  2  |  3  |  4  |  5  |   |        |   7   |   UP    |   9    |   0   |  DEL  |
+            // |    |  -  |  =  |  [  |  ]  |  \  |   |  HOME  |  LFT  |   DWN   |  RGT   |  END  |  F6   |
+            // |    | ESC | GUI | ALT | CAPS|  "  |   |        | VOLUP |  VOLDN  |  MUTE  |       |       |
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&trans     &kp N1     &kp N2    &kp N3    &kp N4    &kp N5            &none &kp N7  &kp UP   &none   &none  &kp DEL
-&trans  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH            &kp HOME  &kp LEFT  &kp DOWN   &kp RIGHT   &kp END   &kp F6
-&trans    &kp ESC   &kp LGUI  &kp RALT  &kp CLCK   &kp DQT            &none  &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &none  &none
-                                &trans     &mo 3            &kp BSPC          &trans  &trans
+&trans   &kp N1     &kp N2     &kp N3    &kp N4     &kp N5            &none     &kp N7        &kp UP        &none       &none     &kp DEL
+&trans   &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH          &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END   &kp F6
+&trans   &kp ESC    &kp LGUI   &kp RALT  &kp CLCK   &kp DQT           &none     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &none     &none
+                               &trans    &mo 3              &kp BSPC            &trans        &trans
             >;
         };
 
@@ -62,14 +62,14 @@
             // -----------------------------------------------------------------------------------------
             // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
             // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |       |     |     |     |     |        |
-            // |          |          |          |          |    |         |   | RESET |     |     |     |     |        |
-            //                                              |     |     |     |     |     |
+            // |          |          |          |          |    |         |   |       |     |     |     |     |        |
+            //                                           |     |     |     |     |     |
 
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &none  &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR   &none            &none                 &none         &none         &none         &none         &none       &none
-          &none            &none            &none            &none   &none            &none                 &none         &none         &none         &none         &none       &none
-                                                            &trans  &trans                   &tog 3                      &trans        &trans
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR   &none            &none          &none         &none         &none         &none         &none         &none
+&none            &none            &none            &none             &none            &none          &none         &none         &none         &none         &none         &none
+                                                    &trans           &trans                   &tog 3               &trans        &trans
             >;
         };
     };
