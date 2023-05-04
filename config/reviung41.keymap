@@ -41,10 +41,9 @@
             label = "ARABIC";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp LEFT_CONTROL &kp SPACE>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &kp SPACE>,
+                <&macro_wait_time 250>,
                 <&macro_tap>,
                 <&tog 5>;
         };
