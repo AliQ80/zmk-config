@@ -30,6 +30,12 @@
             #binding-cells = <0>;
             bindings = <&none &kp A &kp K &kp AT &kp A &kp L &kp I &kp K &kp A &kp R &kp A &kp M &kp DOT &kp C &kp O &kp M>;
         };
+        scr_shot: scr_shot {
+            compatible = "zmk,behavior-macro";
+            label = "SCR_SHOT";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT &kp LEFT_GUI &kp N5>;
+        };
     };
 
     keymap {
@@ -73,7 +79,7 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&trans   &email  &none        &kp LEFT_BRACE        &kp RIGHT_BRACE  &kp GRAVE              &speak         &none        &kp UP       &none             &none  &kp DEL
+&trans   &email  &none        &kp LEFT_BRACE        &kp RIGHT_BRACE  &kp GRAVE              &speak     &scr_shot        &kp UP       &none             &none  &kp DEL
 &trans    &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp BSLH            &kp HOME      &kp LEFT      &kp DOWN   &kp RIGHT           &kp END    &none
 &trans  &kp ESC  &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp TILDE               &none  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp C_PLAY_PAUSE    &none
                                       &trans                  &mo 3             &kp BSPC                  &trans        &trans
