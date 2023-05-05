@@ -28,7 +28,13 @@
             compatible = "zmk,behavior-macro";
             label = "SPEAK";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp ESCAPE>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp ESCAPE>,
+                <&macro_release>,
+                <&kp LALT>;
         };
         scr_shot: scr_shot {
             compatible = "zmk,behavior-macro";
