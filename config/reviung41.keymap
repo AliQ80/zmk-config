@@ -57,6 +57,7 @@
                 <&kp LEFT_CONTROL>,
                 <&macro_tap>,
                 <&kp SPACE>,
+                <&macro_wait_time 1000>,
                 <&macro_release>,
                 <&kp LEFT_CONTROL>,
                 <&macro_tap>,
