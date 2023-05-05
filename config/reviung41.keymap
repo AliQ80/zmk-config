@@ -34,7 +34,13 @@
             compatible = "zmk,behavior-macro";
             label = "SCR_SHOT";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_SHIFT &kp LEFT_GUI &kp N5>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp RIGHT_GUI>,
+                <&macro_tap>,
+                <&kp N5>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp RIGHT_GUI>;
         };
         arabic: arabic {
             compatible = "zmk,behavior-macro";
