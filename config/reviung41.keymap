@@ -10,6 +10,18 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        lh_pht: left_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9 10>;    // <---[[right-hand keys]]
+        };
+    };
     macros {
         email: email {
             compatible = "zmk,behavior-macro";
@@ -80,7 +92,7 @@
 
             bindings = <
    &kp TAB               &kp Q           &kp W           &kp F             &kp P  &kp B             &kp J        &kp L       &kp U       &kp Y             &kp SEMI       &kp BSPC
-&kp ESCAPE  &mt LEFT_CONTROL A  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G             &kp M  &mt RSHFT N  &mt RGUI E  &mt RALT I  &mt RIGHT_CONTROL O        &kp SQT
+&kp ESCAPE  &lh_pht LEFT_CONTROL A  &lh_pht LEFT_ALT R  &lh_pht LEFT_GUI S  &lh_pht LEFT_SHIFT T  &kp G             &kp M  &lh_pht RSHFT N  &lh_pht RGUI E  &lh_pht RALT I  &lh_pht RIGHT_CONTROL O        &kp SQT
  &kp LSHFT               &kp Z           &kp X           &kp C             &kp D  &kp V             &kp K        &kp H   &kp COMMA     &kp DOT             &kp FSLH  &mt RSHFT RET
                                                       &kp LALT             &mo 2         &kp SPACE               &mo 3    &kp RGUI
             >;
