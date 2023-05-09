@@ -79,10 +79,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-   &kp TAB               &kp Q           &kp W           &kp F              &kp P  &kp B             &kp J        &kp L       &kp U       &kp Y             &kp SEMI       &kp BSPC
-&kp ESCAPE  &mt LEFT_CONTROL A  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt RIGHT_SHIFT T  &kp G             &kp M  &mt RSHFT N  &mt RGUI E  &mt RALT I  &mt RIGHT_CONTROL O        &kp SQT
- &kp LSHFT               &kp Z           &kp X           &kp C              &kp D  &kp V             &kp K        &kp H   &kp COMMA     &kp DOT             &kp FSLH  &mt RSHFT RET
-                                                      &kp LALT              &mo 2         &kp SPACE               &mo 3    &kp RGUI
+   &kp TAB               &kp Q           &kp W           &kp F             &kp P  &kp B             &kp J        &kp L       &kp U       &kp Y             &kp SEMI       &kp BSPC
+&kp ESCAPE  &mt LEFT_CONTROL A  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G             &kp M  &mt RSHFT N  &mt RGUI E  &mt RALT I  &mt RIGHT_CONTROL O        &kp SQT
+ &kp LSHFT               &kp Z           &kp X           &kp C             &kp D  &kp V             &kp K        &kp H   &kp COMMA     &kp DOT             &kp FSLH  &mt RSHFT RET
+                                                      &kp LALT             &mo 2         &kp SPACE               &mo 3    &kp RGUI
             >;
         };
 
