@@ -103,10 +103,10 @@
 
         arabic_layer {
             bindings = <
-  &kp TAB  &kp W  &kp E     &kp R  &kp T  &kp Y             &kp U  &kp I      &kp O    &kp P  &kp LEFT_BRACKET               &kp BSPC
-    &kp Q  &kp A  &kp S     &kp D  &kp F  &kp G             &kp H  &kp J      &kp K    &kp L          &kp SEMI      &kp RIGHT_BRACKET
-&kp LSHFT  &kp Z  &kp X     &kp C  &kp V  &kp B             &kp N  &kp M  &kp COMMA  &kp DOT          &kp FSLH  &mt RIGHT_SHIFT ENTER
-                         &kp LALT  &mo 2         &kp SPACE         &mo 3   &kp RGUI
+           &kp Q  &kp W  &kp E     &kp R  &kp T  &kp Y             &kp U  &kp I      &kp O    &kp P  &kp LEFT_BRACKET               &kp BSPC
+&kp LEFT_CONTROL  &kp A  &kp S     &kp D  &kp F  &kp G             &kp H  &kp J      &kp K    &kp L          &kp SEMI      &kp RIGHT_BRACKET
+   &mt LSHFT TAB  &kp Z  &kp X     &kp C  &kp V  &kp B             &kp N  &kp M  &kp COMMA  &kp DOT          &kp FSLH  &mt RIGHT_SHIFT ENTER
+                                &kp LALT  &mo 2         &kp SPACE         &mo 3   &kp RGUI
             >;
         };
 
