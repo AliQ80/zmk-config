@@ -94,19 +94,19 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-      &kp ESCAPE  &kp Q  &kp W     &kp F  &kp P  &kp B             &kp J  &kp L      &kp U    &kp Y  &kp SEMI       &kp BSPC
-&kp LEFT_CONTROL  &kp A  &kp R     &kp S  &kp T  &kp G             &kp M  &kp N      &kp E    &kp I     &kp O        &kp SQT
-   &mt LSHFT TAB  &kp Z  &kp X     &kp C  &kp D  &kp V             &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                                &kp LALT  &mo 2         &kp SPACE         &mo 3   &kp RGUI
+&kp ESCAPE        &kp Q  &kp W  &kp F     &kp P  &kp B             &kp J  &kp L  &kp U      &kp Y    &kp SEMI  &kp BSPC
+&kp LEFT_CONTROL  &kp A  &kp R  &kp S     &kp T  &kp G             &kp M  &kp N  &kp E      &kp I    &kp O     &mt SINGLE_QUOTE RIGHT_CONTROL
+&mt LSHFT TAB     &kp Z  &kp X  &kp C     &kp D  &kp V             &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
+                                &kp LALT  &mo 2         &kp SPACE         &mo 3  &kp RGUI
             >;
         };
 
         arabic_layer {
             bindings = <
-           &kp Q  &kp W  &kp E     &kp R  &kp T  &kp Y             &kp U  &kp I      &kp O    &kp P  &kp LEFT_BRACKET               &kp BSPC
-&kp LEFT_CONTROL  &kp A  &kp S     &kp D  &kp F  &kp G             &kp H  &kp J      &kp K    &kp L          &kp SEMI      &kp RIGHT_BRACKET
-   &mt LSHFT TAB  &kp Z  &kp X     &kp C  &kp V  &kp B             &kp N  &kp M  &kp COMMA  &kp DOT          &kp FSLH  &mt RIGHT_SHIFT ENTER
-                                &kp LALT  &mo 2         &kp SPACE         &mo 3   &kp RGUI
+&kp Q             &kp W  &kp E  &kp R     &kp T  &kp Y             &kp U  &kp I  &kp O      &kp P    &kp LEFT_BRACKET  &kp BSPC
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F  &kp G             &kp H  &kp J  &kp K      &kp L    &kp SEMI          &kp RIGHT_BRACKET
+&mt LSHFT TAB     &kp Z  &kp X  &kp C     &kp V  &kp B             &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH          &mt RIGHT_SHIFT ENTER
+                                &kp LALT  &mo 2         &kp SPACE         &mo 3  &kp RGUI
             >;
         };
 
@@ -118,10 +118,10 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-&trans   &kp EXCL    &kp AT   &kp HASH           &kp DLLR  &kp PRCNT                &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp BACKSPACE
-&trans  &kp CARET  &kp AMPS  &kp COLON  &kp DOUBLE_QUOTES   &kp PIPE                &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp PLUS      &kp EQUAL
-&trans   &kp CAPS  &kp LGUI   &kp LALT         &caps_word  &kp UNDER             &kp NUMBER_0        &kp N1  &kp NUMBER_2  &kp NUMBER_3    &kp DOT  &mt RSHFT RET
-                                &trans             &trans             &kp SPACE                       &mo 4        &trans
+&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR           &kp PRCNT             &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp BACKSPACE
+&trans  &kp CARET  &kp AMPS  &kp COLON  &kp DOUBLE_QUOTES  &kp PIPE              &kp ASTRK     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &kp EQUAL
+&trans  &kp CAPS   &kp LGUI  &kp LALT   &caps_word         &kp UNDER             &kp NUMBER_0  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &mt RSHFT RET
+                             &trans     &trans                        &kp SPACE                &mo 4         &trans
             >;
         };
 
@@ -133,10 +133,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp ESCAPE  &email  &none        &kp LEFT_BRACE        &kp RIGHT_BRACE  &kp GRAVE              &speak     &scr_shot        &kp UP       &none    &kp PAGE_UP  &kp DEL
-    &trans   &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp BSLH            &kp HOME      &kp LEFT      &kp DOWN   &kp RIGHT        &kp END    &none
-    &trans   &none  &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp TILDE             &arabic  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN    &none
-                                         &trans                  &mo 4             &kp BSPC                  &trans        &trans
+&kp ESCAPE  &email  &none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak    &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
+&trans      &none   &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
+&trans      &none   &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
+                           &trans                &mo 4                             &kp BSPC            &trans        &trans
             >;
         };
 
@@ -148,10 +148,10 @@
             //                                           |     |     |     |     |     |
 
             bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &none  &rgb_ug RGB_TOG         &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR   &none            &none                &none  &ext_power EP_ON  &ext_power EP_OFF         &none         &none       &none
-          &none            &none            &none            &none   &none            &mo 5                &none             &none              &none         &none         &none       &none
-                                                            &trans  &trans                   &none                          &trans             &trans
+&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none         &ext_power EP_ON  &ext_power EP_OFF  &none         &none         &none
+&none            &none            &none            &none            &none   &mo 5                   &none         &none             &none              &none         &none         &none
+                                                   &trans           &trans                   &none                &trans            &trans
             >;
         };
 
@@ -163,10 +163,10 @@
             //                     |       |     |          |     |     |
 
             bindings = <
-&none  &none  &none   &none   &none  &none          &none  &kp F1   &kp F2   &kp F3   &kp F4  &none
-&none  &none  &none   &none   &none  &none          &none  &kp F5   &kp F6   &kp F7   &kp F8  &none
-&none  &none  &none   &none   &none  &none         &trans  &kp F9  &kp F10  &kp F11  &kp F12  &none
-                     &trans  &trans         &none          &trans   &trans
+&none  &none  &none  &none   &none   &none         &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none  &none  &none  &none   &none   &none         &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none  &none  &none  &none   &none   &none         &trans  &kp F9  &kp F10  &kp F11  &kp F12  &none
+                     &trans  &trans         &none          &trans  &trans
             >;
         };
     };
