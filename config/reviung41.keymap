@@ -30,6 +30,7 @@
             #binding-cells = <0>;
             bindings = <&kp A &kp K &kp AT &kp A &kp L &kp I &kp K &kp A &kp R &kp A &kp M &kp DOT &kp C &kp O &kp M>;
         };
+
         speak: speak {
             compatible = "zmk,behavior-macro";
             label = "SPEAK";
@@ -42,6 +43,7 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
         scr_shot: scr_shot {
             compatible = "zmk,behavior-macro";
             label = "SCR_SHOT";
@@ -54,6 +56,7 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT &kp RIGHT_GUI>;
         };
+
         arabic: arabic {
             compatible = "zmk,behavior-macro";
             label = "ARABIC";
@@ -130,10 +133,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp ESCAPE  &email  &none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak    &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
-&trans      &none   &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
-&trans      &none   &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
-                           &trans                &mo 4                             &kp BSPC            &trans        &trans
+&kp ESCAPE  &email  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak    &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
+&trans      &none   &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
+&trans      &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
+                                    &trans                &mo 4                             &kp BSPC            &trans        &trans
             >;
         };
 
