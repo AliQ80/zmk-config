@@ -4,4 +4,4 @@
 
 [Official ZMK site](https://zmk.dev/)
 
-[Keyboard Tester](https://keyboard-tester.com/)
+[Keyboard Tester](https://en.key-test.ru/)
