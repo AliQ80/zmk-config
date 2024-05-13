@@ -118,10 +118,10 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR           &kp PRCNT             &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp LC(BACKSPACE)
-&trans  &kp CARET  &kp AMPS  &kp COLON  &kp DOUBLE_QUOTES  &kp PIPE              &kp ASTRK     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &kp EQUAL
-&trans  &kp CAPS   &kp LGUI  &kp LALT   &caps_word         &kp UNDER             &kp NUMBER_0  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &mt RSHFT RET
-                             &trans     &trans                        &kp SPACE                &mo 4         &trans
+&trans        &kp EXCL   &kp AT    &kp HASH   &kp DLLR           &kp PRCNT             &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp LC(BACKSPACE)
+&kp LEFT_ALT  &kp CARET  &kp AMPS  &kp COLON  &kp DOUBLE_QUOTES  &kp PIPE              &kp ASTRK     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &kp EQUAL
+&trans        &kp CAPS   &kp LGUI  &kp TAB    &caps_word         &kp UNDER             &kp NUMBER_0  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &mt RSHFT RET
+                                   &trans     &trans                        &kp SPACE                &mo 4         &trans
             >;
         };
 
@@ -133,10 +133,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp ESCAPE  &email  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak    &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
-&trans      &none   &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
-&trans      &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
-                                    &trans                &mo 4                             &kp BSPC            &trans        &trans
+&kp ESCAPE        &email  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak    &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
+&kp LEFT_CONTROL  &none   &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
+&trans            &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
+                                          &trans                &mo 4                             &kp BSPC            &trans        &trans
             >;
         };
 
