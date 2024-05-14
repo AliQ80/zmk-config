@@ -57,9 +57,9 @@
                 <&kp LEFT_SHIFT &kp RIGHT_GUI>;
         };
 
-        arabic: arabic {
+        arabic_mac: arabic_mac {
             compatible = "zmk,behavior-macro";
-            label = "ARABIC";
+            label = "ARABIC_MAC";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
@@ -71,6 +71,14 @@
                 <&kp LEFT_CONTROL>,
                 <&macro_tap>,
                 <&tog 1>;
+        };
+
+        lang_lx: lang_lx {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(SPACE)>, <&macro_wait_time 500>, <&tog 1>;
+
+            label = "LANG_LX";
         };
     };
 
@@ -94,19 +102,19 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp F     &kp P             &kp B             &kp J  &kp L              &kp U        &kp Y    &kp SEMI  &kp BACKSPACE
-&kp LEFT_CONTROL  &kp A  &kp R  &kp S     &hm LEFT_SHIFT T  &kp G             &kp M  &hm RIGHT_SHIFT N  &hm RCTRL E  &kp I    &kp O     &mt RIGHT_CONTROL SINGLE_QUOTE
-&mt LSHFT TAB     &kp Z  &kp X  &kp C     &kp D             &kp V             &kp K  &kp H              &kp COMMA    &kp DOT  &kp FSLH  &mt RSHFT RET
-                                &kp LALT  &mo 2                    &kp SPACE         &mo 3              &kp RGUI
+&kp ESCAPE        &kp Q       &kp W           &kp F        &kp P             &kp B             &kp J  &kp L              &kp U        &kp Y            &kp SEMI    &kp BACKSPACE
+&kp LEFT_CONTROL  &hm RGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LEFT_SHIFT T  &kp G             &kp M  &hm RIGHT_SHIFT N  &hm RCTRL E  &hm RIGHT_ALT I  &hm LGUI O  &kp SQT
+&kp TAB           &kp Z       &kp X           &kp C        &kp D             &kp V             &kp K  &kp H              &kp COMMA    &kp DOT          &kp FSLH    &kp ENTER
+                                              &sl 4        &mo 2                    &kp SPACE         &mo 3              &lang_lx
             >;
         };
 
         arabic_layer {
             bindings = <
 &kp Q             &kp W  &kp E  &kp R     &kp T  &kp Y             &kp U  &kp I  &kp O      &kp P    &kp LEFT_BRACKET  &kp BSPC
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F  &kp G             &kp H  &kp J  &kp K      &kp L    &kp SEMI          &kp RIGHT_BRACKET
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F  &kp G             &kp H  &kp J  &kp K      &kp L    &hm RGUI SEMI     &kp RIGHT_BRACKET
 &mt LSHFT TAB     &kp Z  &kp X  &kp C     &kp V  &kp B             &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH          &mt RIGHT_SHIFT ENTER
-                                &kp LALT  &mo 2         &kp SPACE         &mo 3  &kp RGUI
+                                &kp LALT  &mo 2         &kp SPACE         &mo 3  &lang_lx
             >;
         };
 
@@ -133,10 +141,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp ESCAPE        &email  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak    &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
-&kp LEFT_CONTROL  &none   &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
-&trans            &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
-                                          &trans                &mo 4                             &kp BSPC            &trans        &trans
+&kp ESCAPE        &email  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
+&kp LEFT_CONTROL  &none   &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
+&trans            &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
+                                          &trans                &mo 4                             &kp BSPC               &trans        &trans
             >;
         };
 
