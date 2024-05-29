@@ -141,10 +141,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp ESCAPE        &email  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
-&kp LEFT_CONTROL  &none   &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
-&trans            &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
-                                          &trans                &mo 4                             &kp BSPC               &trans        &trans
+&kp ESCAPE        &email     &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
+&kp LEFT_CONTROL  &soft_off  &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
+&trans            &none      &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
+                                             &trans                &mo 4                             &kp BSPC               &trans        &trans
             >;
         };
 
