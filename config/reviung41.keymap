@@ -21,6 +21,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -112,7 +113,7 @@
 &kp ESCAPE     &kp Q       &kp W           &kp F        &kp P             &kp B             &kp J  &kp L              &kp U        &kp Y            &kp SEMI    &kp RC(BACKSPACE)
 &kp TAB        &hm RGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LEFT_SHIFT T  &kp G             &kp M  &hm RIGHT_SHIFT N  &hm RCTRL E  &hm RIGHT_ALT I  &hm LGUI O  &kp SQT
 &kp BACKSPACE  &kp Z       &kp X           &kp C        &kp D             &kp V             &kp K  &kp H              &kp COMMA    &kp DOT          &kp FSLH    &kp ENTER
-                                           &sl 4        &mo 2                    &kp SPACE         &mo 3              &lang_lx
+                                           &sl 4        &mo_tog 2 2              &kp SPACE         &mo 3              &lang_lx
             >;
         };
 
