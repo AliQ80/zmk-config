@@ -141,10 +141,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp ESCAPE        &email     &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
-&kp LEFT_CONTROL  &soft_off  &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
-&trans            &none      &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
-                                             &trans                &mo 4                             &kp BSPC               &trans        &trans
+&kp ESCAPE        &email  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
+&kp LEFT_CONTROL  &none   &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
+&trans            &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
+                                          &trans                &mo 4                             &kp BSPC               &trans        &trans
             >;
         };
 
@@ -157,7 +157,7 @@
 
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none         &ext_power EP_ON  &ext_power EP_OFF  &none         &none         &none
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none         &ext_power EP_ON  &ext_power EP_OFF  &soft_off     &none         &none
 &none            &none            &none            &none            &tog 2  &mo 5                   &none         &none             &none              &none         &none         &none
                                                    &trans           &trans                   &none                &trans            &trans
             >;
