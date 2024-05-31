@@ -48,6 +48,13 @@
             #binding-cells = <0>;
             bindings = <&mo_sk 2 LSHIFT>, <&tog 2>;
         };
+
+        td_shm3cw: td_shm3cw {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SHM3CW";
+            #binding-cells = <0>;
+            bindings = <&mo_sk 3 LSHIFT>, <&caps_word>;
+        };
     };
 
     macros {
@@ -132,7 +139,7 @@
 &kp BACKSPACE  &kp Q       &kp W           &kp F        &kp P             &kp B             &kp J  &kp L              &kp U        &kp Y            &kp SEMI    &kp RC(BACKSPACE)
 &kp TAB        &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LEFT_SHIFT T  &kp G             &kp M  &hm RIGHT_SHIFT N  &hm RCTRL E  &hm RIGHT_ALT I  &hm RGUI O  &kp SQT
 &kp ESC        &kp Z       &kp X           &kp C        &kp D             &kp V             &kp K  &kp H              &kp COMMA    &kp DOT          &kp FSLH    &kp ENTER
-                                           &sl 4        &td_shm2t2               &kp SPACE         &mo_sk 3 RSHIFT    &lang_lx
+                                           &sl 4        &td_shm2t2               &kp SPACE         &td_shm3cw         &lang_lx
             >;
         };
 
@@ -155,7 +162,7 @@
             bindings = <
 &trans        &kp EXCL   &kp AT    &kp HASH   &kp DLLR           &kp PRCNT             &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp LC(BACKSPACE)
 &trans        &kp CARET  &kp AMPS  &kp COLON  &kp DOUBLE_QUOTES  &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &kp EQUAL
-&kp LEFT_ALT  &kp CAPS   &kp LGUI  &kp TAB    &caps_word         &kp UNDER             &mo 4      &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &mt RSHFT RET
+&kp LEFT_ALT  &kp CAPS   &kp LGUI  &kp TAB    &none              &kp UNDER             &mo 4      &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &kp ENTER
                                    &trans     &trans                        &kp SPACE             &kp NUMBER_0  &trans
             >;
         };
@@ -171,7 +178,7 @@
 &kp ESCAPE        &email  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
 &kp LEFT_CONTROL  &none   &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
 &trans            &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
-                                          &trans                &mo 4                             &kp BSPC               &trans        &trans
+                                          &trans                &trans                            &kp BSPC               &trans        &trans
             >;
         };
 
@@ -185,7 +192,7 @@
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none         &ext_power EP_ON  &ext_power EP_OFF  &soft_off     &none         &none
-&none            &none            &none            &none            &tog 2  &mo 5                   &none         &none             &none              &none         &none         &none
+&none            &none            &none            &none            &none   &mo 5                   &none         &none             &none              &none         &none         &none
                                                    &trans           &trans                   &none                &trans            &trans
             >;
         };
@@ -203,6 +210,15 @@
 &none  &none  &none  &none   &none   &none         &trans  &kp F1  &kp F2   &kp F3   &kp F4   &none
                      &trans  &trans         &none          &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        L2_L3 {
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
