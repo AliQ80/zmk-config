@@ -25,7 +25,7 @@
         mo_tog: mo_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&tog>;
 
@@ -35,7 +35,7 @@
         mo_sk: mo_sk {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&sk>;
 
@@ -136,20 +136,24 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp BACKSPACE  &kp Q       &kp W           &kp F        &kp P             &kp B             &kp J  &kp L              &kp U        &kp Y            &kp SEMI    &kp RC(BACKSPACE)
-&kp TAB        &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LEFT_SHIFT T  &kp G             &kp M  &hm RIGHT_SHIFT N  &hm RCTRL E  &hm RIGHT_ALT I  &hm RGUI O  &kp SQT
-&kp ESC        &kp Z       &kp X           &kp C        &kp D             &kp V             &kp K  &kp H              &kp COMMA    &kp DOT          &kp FSLH    &kp ENTER
-                                           &sl 4        &td_shm2t2               &kp SPACE         &td_shm3cw         &lang_lx
+&kp ESC        &kp Q       &kp W           &kp F        &kp P             &kp B             &kp J  &kp L              &kp U        &kp Y            &kp SEMI    &kp SQT
+&kp BACKSPACE  &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LEFT_SHIFT T  &kp G             &kp M  &hm RIGHT_SHIFT N  &hm RCTRL E  &hm RIGHT_ALT I  &hm RGUI O  &kp RC(BACKSPACE)
+&kp TAB        &kp Z       &kp X           &kp C        &kp D             &kp V             &kp K  &kp H              &kp COMMA    &kp DOT          &kp FSLH    &kp ENTER
+                                           &sl 5        &td_shm2t2               &kp SPACE         &td_shm3cw         &lang_lx
             >;
+
+            label = "Default";
         };
 
         arabic_layer {
             bindings = <
-&kp Q   &kp W       &kp E       &kp R        &kp T         &kp Y             &kp U  &kp I         &kp O        &kp P       &kp LEFT_BRACKET  &kp BSPC
-&trans  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G             &kp H  &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI     &kp RIGHT_BRACKET
-&trans  &kp Z       &kp X       &kp C        &kp V         &kp B             &kp N  &kp M         &kp COMMA    &kp DOT     &kp FSLH          &kp ENTER
+&kp Q   &kp W       &kp E       &kp R        &kp T         &kp Y             &kp U  &kp I         &kp O        &kp P       &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G             &kp H  &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI     &trans
+&trans  &kp Z       &kp X       &kp C        &kp V         &kp B             &kp N  &kp M         &kp COMMA    &kp DOT     &kp FSLH          &trans
                                 &trans       &trans               &kp SPACE         &trans        &trans
             >;
+
+            label = "Arabic";
         };
 
         lower_layer {
@@ -160,11 +164,13 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-&trans        &kp EXCL   &kp AT    &kp HASH   &kp DLLR           &kp PRCNT             &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp LC(BACKSPACE)
-&trans        &kp CARET  &kp AMPS  &kp COLON  &kp DOUBLE_QUOTES  &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &kp EQUAL
-&kp LEFT_ALT  &kp CAPS   &kp LGUI  &kp TAB    &none              &kp UNDER             &mo 4      &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &kp ENTER
-                                   &trans     &trans                        &kp SPACE             &kp NUMBER_0  &trans
+&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR           &kp PRCNT             &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp EQUAL
+&trans  &kp CARET  &kp AMPS  &kp COLON  &kp DOUBLE_QUOTES  &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
+&trans  &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHIFT         &kp CAPS              &kp UNDER  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &none      &trans
+                             &trans     &trans                        &kp SPACE             &kp NUMBER_0  &kp DOT
             >;
+
+            label = "Lower";
         };
 
         raise_layer {
@@ -180,6 +186,8 @@
 &trans            &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
                                           &trans                &trans                            &kp BSPC               &trans        &trans
             >;
+
+            label = "Raise";
         };
 
         adjust_layer {
@@ -192,9 +200,22 @@
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none         &ext_power EP_ON  &ext_power EP_OFF  &soft_off     &none         &none
-&none            &none            &none            &none            &none   &mo 5                   &none         &none             &none              &none         &none         &none
+&none            &none            &none            &none            &none   &mo 6                   &none         &none             &none              &none         &none         &none
                                                    &trans           &trans                   &none                &trans            &trans
             >;
+
+            label = "Adjust";
+        };
+
+        dup_adjust_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans          &trans          &trans  &trans
+            >;
+
+            label = "Duplicate Adjust";
         };
 
         function_layer {
@@ -210,6 +231,8 @@
 &none  &none  &none  &none   &none   &none         &trans  &kp F1  &kp F2   &kp F3   &kp F4   &none
                      &trans  &trans         &none          &trans  &trans
             >;
+
+            label = "Function";
         };
     };
 
