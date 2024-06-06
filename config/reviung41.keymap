@@ -41,21 +41,21 @@
             bindings = <&mo>, <&sk>;
 
             label = "MO_SK";
-            quick-tap-ms = <119>;
+            quick-tap-ms = <125>;
         };
 
-        td_shm2t2: td_shm2t2 {
+        sl5tog2: sl5tog2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SHM2T2";
+            label = "SL5TOG2";
             #binding-cells = <0>;
-            bindings = <&mo_sk 2 LSHIFT>, <&tog 2>;
+            bindings = <&sl 5>, <&tog 2>;
         };
 
-        td_shm3cw: td_shm3cw {
+        langcaps: langcaps {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SHM3CW";
+            label = "LANGCAPS";
             #binding-cells = <0>;
-            bindings = <&mo_sk 3 LSHIFT>, <&caps_word>;
+            bindings = <&lang_lx>, <&caps_word>;
         };
     };
 
@@ -206,7 +206,7 @@
 &kp ESC        &kp Q       &kp W           &kp F        &kp P             &kp B             &kp J  &kp L              &kp U        &kp Y            &kp SEMI    &kp SQT
 &kp BACKSPACE  &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LEFT_SHIFT T  &kp G             &kp M  &hm RIGHT_SHIFT N  &hm RCTRL E  &hm RIGHT_ALT I  &hm RGUI O  &kp RC(BACKSPACE)
 &kp TAB        &kp Z       &kp X           &kp C        &kp D             &kp V             &kp K  &kp H              &kp COMMA    &kp DOT          &kp FSLH    &kp ENTER
-                                           &sl 5        &td_shm2t2               &kp SPACE         &td_shm3cw         &lang_lx
+                                           &sl5tog2     &mo_sk 2 LSHIFT          &kp SPACE         &mo_sk 3 RSHFT     &langcaps
             >;
 
             label = "Default";
