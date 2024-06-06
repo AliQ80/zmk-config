@@ -57,6 +57,30 @@
             #binding-cells = <0>;
             bindings = <&lang_lx>, <&caps_word>;
         };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+        };
     };
 
     macros {
@@ -203,10 +227,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp ESC        &kp Q       &kp W           &kp F        &kp P             &kp B             &kp J  &kp L              &kp U        &kp Y            &kp SEMI    &kp SQT
-&kp BACKSPACE  &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LEFT_SHIFT T  &kp G             &kp M  &hm RIGHT_SHIFT N  &hm RCTRL E  &hm RIGHT_ALT I  &hm RGUI O  &kp RC(BACKSPACE)
-&kp TAB        &kp Z       &kp X           &kp C        &kp D             &kp V             &kp K  &kp H              &kp COMMA    &kp DOT          &kp FSLH    &kp ENTER
-                                           &sl5tog2     &mo_sk 2 LSHIFT          &kp SPACE         &mo_sk 3 RSHFT     &langcaps
+&kp ESC        &kp Q        &kp W        &kp F         &kp P            &kp B             &kp J  &kp L           &kp U         &kp Y        &kp SEMI     &kp SQT
+&kp BACKSPACE  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T     &kp G             &kp M  &hmr RSHIFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp RC(BACKSPACE)
+&kp TAB        &kp Z        &kp X        &kp C         &kp D            &kp V             &kp K  &kp H           &kp COMMA     &kp DOT      &kp FSLH     &kp ENTER
+                                         &sl5tog2      &mo_sk 2 LSHIFT         &kp SPACE         &mo_sk 3 RSHFT  &langcaps
             >;
 
             label = "Default";
