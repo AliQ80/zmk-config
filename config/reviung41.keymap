@@ -44,11 +44,11 @@
             quick-tap-ms = <125>;
         };
 
-        sl5tog2: sl5tog2 {
+        sl4tog2: sl4tog2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "SL5TOG2";
+            label = "SL4TOG2";
             #binding-cells = <0>;
-            bindings = <&sl 5>, <&tog 2>;
+            bindings = <&sl 4>, <&tog 2>;
         };
 
         langcaps: langcaps {
@@ -230,7 +230,7 @@
 &kp ESC        &kp Q        &kp W        &kp F         &kp P            &kp B             &kp J  &kp L           &kp U         &kp Y        &kp SEMI     &kp SQT
 &kp BACKSPACE  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T     &kp G             &kp M  &hmr RSHIFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp RC(BACKSPACE)
 &kp TAB        &kp Z        &kp X        &kp C         &kp D            &kp V             &kp K  &kp H           &kp COMMA     &kp DOT      &kp FSLH     &kp ENTER
-                                         &sl5tog2      &mo_sk 2 LSHIFT         &kp SPACE         &mo_sk 3 RSHFT  &langcaps
+                                         &sl4tog2      &mo_sk 2 LSHIFT         &kp SPACE         &mo_sk 3 RSHFT  &lang_lx
             >;
 
             label = "Default";
@@ -255,10 +255,10 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR           &kp PRCNT             &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp EQUAL
-&trans  &kp CARET  &kp AMPS  &kp COLON  &kp DOUBLE_QUOTES  &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
-&trans  &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHIFT         &kp CAPS              &kp UNDER  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &none      &trans
-                             &trans     &trans                        &kp SPACE             &kp NUMBER_0  &kp DOT
+&trans  &kp EXCL         &kp AT          &kp HASH          &kp DLLR                  &kp PRCNT             &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp EQUAL
+&trans  &hml LGUI CARET  &hml LALT AMPS  &hml LCTRL COLON  &hml LSHFT DOUBLE_QUOTES  &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
+&trans  &none            &none           &none             &caps_word                &kp CAPS              &kp UNDER  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &none      &trans
+                                         &trans            &trans                               &kp SPACE             &kp NUMBER_0  &kp DOT
             >;
 
             label = "Lower";
@@ -272,10 +272,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp ESCAPE        &email  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
-&kp LEFT_CONTROL  &none   &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
-&trans            &none   &kp C_AC_PRINT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
-                                          &trans                &trans                            &kp BSPC               &trans        &trans
+&kp ESCAPE        &email    &none           &kp LEFT_BRACE               &kp RIGHT_BRACE               &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
+&kp LEFT_CONTROL  &kp LGUI  &kp LALT        &hml LCTRL LEFT_PARENTHESIS  &hml LSHFT RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
+&trans            &none     &kp C_AC_PRINT  &kp LEFT_BRACKET             &kp RIGHT_BRACKET             &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
+                                            &trans                       &trans                                   &kp BSPC               &trans        &trans
             >;
 
             label = "Raise";
@@ -291,21 +291,11 @@
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &mc_bt0  &mc_bt1           &mc_bt2            &mc_bt3    &mc_bt4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none    &ext_power EP_ON  &ext_power EP_OFF  &soft_off  &none    &none
-&none            &none            &none            &none            &none   &mo 6                   &none    &none             &none              &none      &none    &none
+&none            &none            &none            &none            &none   &mo 5                   &none    &none             &none              &none      &none    &none
                                                    &trans           &trans                   &none           &trans            &trans
             >;
 
             label = "Adjust";
-        };
-
-        dup_adjust {
-            label = "Duplicate Adjust";
-            bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &mc_bt0  &mc_bt1           &mc_bt2            &mc_bt3    &mc_bt4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none    &ext_power EP_ON  &ext_power EP_OFF  &soft_off  &none    &none
-&none            &none            &none            &none            &none   &mo 6                   &none    &none             &none              &none      &none    &none
-                                                   &trans           &trans                   &none           &trans            &trans
-            >;
         };
 
         function_layer {
