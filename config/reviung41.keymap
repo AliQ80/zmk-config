@@ -81,6 +81,71 @@
 
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
         };
+
+        thah_behav: thah_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "THAH_BEHAV";
+            bindings = <&kp QUESTION>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        tah_behav: tah_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TAH_BEHAV";
+            bindings = <&kp SINGLE_QUOTE>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        thal_behav: thal_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "THAL_BEHAV";
+            bindings = <&kp GRAVE>, <&kp Z>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        dal_behav: dal_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DAL_BEHAV";
+            bindings = <&kp RBKT>, <&kp X>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        zai_behav: zai_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ZAI_BEHAV";
+            bindings = <&kp DOT>, <&kp H>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        raa_behav: raa_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RAA_BEHAV";
+            bindings = <&kp V>, <&kp Y>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        wow_behav: wow_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WOW_BEHAV";
+            bindings = <&kp COMMA>, <&kp C>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -313,6 +378,15 @@
             >;
 
             label = "Function";
+        };
+
+        arabic_mac {
+            bindings = <
+&trans  &trans       &trans      &trans       &trans      &trans              &trans      &trans      &trans  &trans  &trans  &trans
+&trans  &trans       &trans      &trans       &trans      &trans              &trans      &trans      &trans  &trans  &trans  &trans
+&trans  &thah_behav  &tah_behav  &thal_behav  &dal_behav  &zai_behav          &raa_behav  &wow_behav  &trans  &trans  &trans  &trans
+                                 &trans       &trans                  &trans              &trans      &trans
+            >;
         };
     };
 
