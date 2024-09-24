@@ -146,6 +146,66 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        thaa_behav: thaa_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "THAA_BEHAV";
+            bindings = <&kp E>, <&kp A>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        qaf_behav: qaf_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QAF_BEHAV";
+            bindings = <&kp R>, <&kp S>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        faa_behav: faa_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FAA_BEHAV";
+            bindings = <&kp T>, <&kp E>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        ghain_behav: ghain_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GHAIN_BEHAV";
+            bindings = <&kp Y>, <&kp R>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        ain_behav: ain_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AIN_BEHAV";
+            bindings = <&kp U>, <&kp X>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        haa_behav: haa_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HAA_BEHAV";
+            bindings = <&kp I>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -338,7 +398,7 @@
 
             bindings = <
 &kp ESCAPE        &email    &none           &kp LEFT_BRACE               &kp RIGHT_BRACE               &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
-&kp LEFT_CONTROL  &kp LGUI  &kp LALT        &hml LCTRL LEFT_PARENTHESIS  &hml LSHFT RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &none
+&kp LEFT_CONTROL  &kp LGUI  &kp LALT        &hml LCTRL LEFT_PARENTHESIS  &hml LSHFT RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &kp RA(BACKSPACE)
 &trans            &none     &kp C_AC_PRINT  &kp LEFT_BRACKET             &kp RIGHT_BRACKET             &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
                                             &trans                       &trans                                   &kp BSPC               &trans        &trans
             >;
@@ -382,10 +442,10 @@
 
         arabic_mac {
             bindings = <
-&trans  &trans       &trans       &trans        &trans        &trans              &trans      &trans        &trans        &trans        &trans          &trans
-&trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp H       &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
-&trans  &thah_behav  &tah_behav   &thal_behav   &dal_behav    &zai_behav          &raa_behav  &wow_behav    &kp COMMA     &kp DOT       &kp SLASH       &trans
-                                  &trans        &trans                    &trans              &trans        &trans
+&kp Q   &kp W        &thaa_behav  &qaf_behav    &faa_behav    &ghain_behav          &ain_behav  &haa_behav    &kp O         &kp P         &kp LBKT        &kp RBKT
+&trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                 &kp H       &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
+&trans  &thah_behav  &tah_behav   &thal_behav   &dal_behav    &zai_behav            &raa_behav  &wow_behav    &kp COMMA     &kp DOT       &kp SLASH       &trans
+                                  &trans        &trans                      &trans              &trans        &trans
             >;
         };
     };
