@@ -94,7 +94,7 @@
         quo_tah: quo_tah {
             compatible = "zmk,behavior-mod-morph";
             label = "QUO_TAH";
-            bindings = <&kp SINGLE_QUOTE>, <&kp D>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp N>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
