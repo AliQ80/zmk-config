@@ -44,11 +44,11 @@
             quick-tap-ms = <125>;
         };
 
-        sl4tog2: sl4tog2 {
+        SlAdTogNum: SlAdTogNum {
             compatible = "zmk,behavior-tap-dance";
-            label = "SL4TOG2";
+            label = "SLADTOGNUM";
             #binding-cells = <0>;
-            bindings = <&sl 4>, <&tog 2>;
+            bindings = <&sl 5>, <&tog 3>;
         };
 
         langcaps: langcaps {
@@ -261,7 +261,7 @@
         lang_lx: lang_lx {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RG(SPACE)>, <&macro_wait_time 500>, <&tog 1>;
+            bindings = <&kp RG(SPACE)>, <&macro_wait_time 500>, <&tog 2>;
 
             label = "LANG_LX";
         };
@@ -355,7 +355,7 @@
 &kp ESC        &kp Q        &kp W        &kp F         &kp P            &kp B             &kp J  &kp L           &kp U         &kp Y        &kp SEMI     &kp SQT
 &kp BACKSPACE  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T     &kp G             &kp M  &hmr RSHIFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp RC(BACKSPACE)
 &kp TAB        &kp Z        &kp X        &kp C         &kp D            &kp V             &kp K  &kp H           &kp COMMA     &kp DOT      &kp FSLH     &kp ENTER
-                                         &sl4tog2      &mo_sk 2 LSHIFT         &kp SPACE         &mo_sk 3 RSHFT  &lang_lx
+                                         &SlAdTogNum   &mo_sk 3 LSHIFT         &kp SPACE         &mo_sk 4 RSHFT  &lang_lx
             >;
 
             label = "Default";
@@ -370,6 +370,15 @@
             >;
 
             label = "Arabic";
+        };
+
+        arabic_mac {
+            bindings = <
+&kp Q   &kp W        &thaa_behav  &qaf_behav    &faa_behav    &ghain_behav          &ain_behav  &haa_behav    &kp O         &kp P         &kp LBKT        &kp RBKT
+&trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                 &kp H       &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
+&trans  &thah_behav  &tah_behav   &thal_behav   &dal_behav    &zai_behav            &raa_behav  &wow_behav    &kp COMMA     &kp DOT       &kp SLASH       &trans
+                                  &trans        &trans                      &trans              &trans        &trans
+            >;
         };
 
         lower_layer {
@@ -416,7 +425,7 @@
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &mc_bt0  &mc_bt1           &mc_bt2            &mc_bt3    &mc_bt4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none    &ext_power EP_ON  &ext_power EP_OFF  &soft_off  &none    &none
-&none            &none            &none            &none            &none   &mo 5                   &none    &none             &none              &none      &none    &none
+&none            &none            &none            &none            &none   &mo 6                   &none    &none             &none              &none      &none    &none
                                                    &trans           &trans                   &none           &trans            &trans
             >;
 
@@ -439,23 +448,14 @@
 
             label = "Function";
         };
-
-        arabic_mac {
-            bindings = <
-&kp Q   &kp W        &thaa_behav  &qaf_behav    &faa_behav    &ghain_behav          &ain_behav  &haa_behav    &kp O         &kp P         &kp LBKT        &kp RBKT
-&trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                 &kp H       &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
-&trans  &thah_behav  &tah_behav   &thal_behav   &dal_behav    &zai_behav            &raa_behav  &wow_behav    &kp COMMA     &kp DOT       &kp SLASH       &trans
-                                  &trans        &trans                      &trans              &trans        &trans
-            >;
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         L2_L3 {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 };
