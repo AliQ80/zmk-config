@@ -82,45 +82,45 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
         };
 
-        thah_behav: thah_behav {
+        slsh_thah: slsh_thah {
             compatible = "zmk,behavior-mod-morph";
-            label = "THAH_BEHAV";
+            label = "SLSH_THAH";
             bindings = <&kp SLASH>, <&none>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        tah_behav: tah_behav {
+        squo_tah: squo_tah {
             compatible = "zmk,behavior-mod-morph";
-            label = "TAH_BEHAV";
+            label = "SQUO_TAH";
             bindings = <&kp SINGLE_QUOTE>, <&none>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        thal_behav: thal_behav {
+        grv_thal: grv_thal {
             compatible = "zmk,behavior-mod-morph";
-            label = "THAL_BEHAV";
+            label = "GRV_THAL";
             bindings = <&kp GRAVE>, <&kp Z>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
 
-        dal_behav: dal_behav {
+        rbrkt_dal: rbrkt_dal {
             compatible = "zmk,behavior-mod-morph";
-            label = "DAL_BEHAV";
+            label = "RBRKT_DAL";
             bindings = <&kp RBKT>, <&kp X>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
 
-        zai_behav: zai_behav {
+        dot_zai: dot_zai {
             compatible = "zmk,behavior-mod-morph";
-            label = "ZAI_BEHAV";
+            label = "DOT_ZAI";
             bindings = <&kp DOT>, <&kp H>;
 
             #binding-cells = <0>;
@@ -128,9 +128,9 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        raa_behav: raa_behav {
+        V_raa: V_raa {
             compatible = "zmk,behavior-mod-morph";
-            label = "RAA_BEHAV";
+            label = "V_RAA";
             bindings = <&kp V>, <&kp Y>;
 
             #binding-cells = <0>;
@@ -138,18 +138,18 @@
             keep-mods = <(MOD_LSFT)>;
         };
 
-        wow_behav: wow_behav {
+        coma_wow: coma_wow {
             compatible = "zmk,behavior-mod-morph";
-            label = "WOW_BEHAV";
+            label = "COMA_WOW";
             bindings = <&kp COMMA>, <&kp C>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
 
-        thaa_behav: thaa_behav {
+        E_thaa: E_thaa {
             compatible = "zmk,behavior-mod-morph";
-            label = "THAA_BEHAV";
+            label = "E_THAA";
             bindings = <&kp E>, <&kp A>;
 
             #binding-cells = <0>;
@@ -157,9 +157,9 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        qaf_behav: qaf_behav {
+        R_qaf: R_qaf {
             compatible = "zmk,behavior-mod-morph";
-            label = "QAF_BEHAV";
+            label = "R_QAF";
             bindings = <&kp R>, <&kp S>;
 
             #binding-cells = <0>;
@@ -167,9 +167,9 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        faa_behav: faa_behav {
+        T_faa: T_faa {
             compatible = "zmk,behavior-mod-morph";
-            label = "FAA_BEHAV";
+            label = "T_FAA";
             bindings = <&kp T>, <&kp E>;
 
             #binding-cells = <0>;
@@ -177,9 +177,9 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        ghain_behav: ghain_behav {
+        Y_ghain: Y_ghain {
             compatible = "zmk,behavior-mod-morph";
-            label = "GHAIN_BEHAV";
+            label = "Y_GHAIN";
             bindings = <&kp Y>, <&kp R>;
 
             #binding-cells = <0>;
@@ -187,9 +187,9 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        ain_behav: ain_behav {
+        U_ain: U_ain {
             compatible = "zmk,behavior-mod-morph";
-            label = "AIN_BEHAV";
+            label = "U_AIN";
             bindings = <&kp U>, <&kp X>;
 
             #binding-cells = <0>;
@@ -197,9 +197,9 @@
             keep-mods = <(MOD_LSFT)>;
         };
 
-        haa_behav: haa_behav {
+        I_haa: I_haa {
             compatible = "zmk,behavior-mod-morph";
-            label = "HAA_BEHAV";
+            label = "I_HAA";
             bindings = <&kp I>, <&kp GRAVE>;
 
             #binding-cells = <0>;
@@ -207,19 +207,29 @@
             keep-mods = <(MOD_LSFT)>;
         };
 
-        slash_behav: slash_behav {
+        slash_qmark: slash_qmark {
             compatible = "zmk,behavior-mod-morph";
-            label = "SLASH_BEHAV";
+            label = "SLASH_QMARK";
             bindings = <&kp RS(L)>, <&kp QMARK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
 
-        sheen_behav: sheen_behav {
+        H_alif: H_alif {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHEEN_BEHAV";
-            bindings = <&kp A>, <&none>;
+            label = "H_ALIF";
+            bindings = <&kp H>, <&kp N>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        G_lam: G_lam {
+            compatible = "zmk,behavior-mod-morph";
+            label = "G_LAM";
+            bindings = <&kp G>, <&none>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -392,10 +402,10 @@
 
         arabic_mac {
             bindings = <
-&kp Q   &kp W        &thaa_behav  &qaf_behav    &faa_behav    &ghain_behav          &ain_behav  &haa_behav    &kp O         &kp P         &kp LBKT        &kp RBKT
-&trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                 &kp H       &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
-&trans  &thah_behav  &tah_behav   &thal_behav   &dal_behav    &zai_behav            &raa_behav  &wow_behav    &kp RS(K)     &kp RS(DOT)   &slash_behav    &trans
-                                  &trans        &trans                      &trans              &trans        &trans
+&kp Q   &kp W        &E_thaa      &R_qaf        &T_faa        &Y_ghain          &U_ain   &I_haa        &kp O         &kp P         &kp LBKT        &kp RBKT
+&trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &G_lam            &H_alif  &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
+&trans  &slsh_thah   &squo_tah    &grv_thal     &rbrkt_dal    &dot_zai          &V_raa   &coma_wow     &kp RS(K)     &kp RS(DOT)   &slash_qmark    &trans
+                                  &trans        &trans                  &trans           &trans        &trans
             >;
         };
 
