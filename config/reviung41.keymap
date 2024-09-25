@@ -91,13 +91,14 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        squo_tah: squo_tah {
+        quo_tah: quo_tah {
             compatible = "zmk,behavior-mod-morph";
-            label = "SQUO_TAH";
-            bindings = <&kp SINGLE_QUOTE>, <&none>;
+            label = "QUO_TAH";
+            bindings = <&kp SINGLE_QUOTE>, <&kp D>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
 
         grv_thal: grv_thal {
@@ -404,7 +405,7 @@
             bindings = <
 &kp Q   &kp W        &E_thaa      &R_qaf        &T_faa        &Y_ghain          &U_ain   &I_haa        &kp O         &kp P         &kp LBKT        &kp RBKT
 &trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &G_lam            &H_alif  &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
-&trans  &slsh_thah   &squo_tah    &grv_thal     &rbrkt_dal    &dot_zai          &V_raa   &coma_wow     &kp RS(K)     &kp RS(DOT)   &slash_qmark    &trans
+&trans  &slsh_thah   &quo_tah     &grv_thal     &rbrkt_dal    &dot_zai          &V_raa   &coma_wow     &kp RS(K)     &kp RS(DOT)   &slash_qmark    &trans
                                   &trans        &trans                  &trans           &trans        &trans
             >;
         };
