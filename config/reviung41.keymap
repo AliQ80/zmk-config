@@ -98,7 +98,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
         };
 
         grv_thal: grv_thal {
