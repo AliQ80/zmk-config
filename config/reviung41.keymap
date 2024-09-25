@@ -85,7 +85,7 @@
         thah_behav: thah_behav {
             compatible = "zmk,behavior-mod-morph";
             label = "THAH_BEHAV";
-            bindings = <&kp QUESTION>, <&none>;
+            bindings = <&kp SLASH>, <&none>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -205,6 +205,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
+        };
+
+        slash_behav: slash_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_BEHAV";
+            bindings = <&kp RS(L)>, <&kp QMARK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        sheen_behav: sheen_behav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHEEN_BEHAV";
+            bindings = <&kp A>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
@@ -376,7 +394,7 @@
             bindings = <
 &kp Q   &kp W        &thaa_behav  &qaf_behav    &faa_behav    &ghain_behav          &ain_behav  &haa_behav    &kp O         &kp P         &kp LBKT        &kp RBKT
 &trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                 &kp H       &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
-&trans  &thah_behav  &tah_behav   &thal_behav   &dal_behav    &zai_behav            &raa_behav  &wow_behav    &kp COMMA     &kp DOT       &kp SLASH       &trans
+&trans  &thah_behav  &tah_behav   &thal_behav   &dal_behav    &zai_behav            &raa_behav  &wow_behav    &kp RS(K)     &kp RS(DOT)   &slash_behav    &trans
                                   &trans        &trans                      &trans              &trans        &trans
             >;
         };
