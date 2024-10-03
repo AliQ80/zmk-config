@@ -481,8 +481,13 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        L2_L3 {
-            if-layers = <6 5>;
+        L4_L5 {
+            if-layers = <5 4>;
+            then-layer = <5>;
+        };
+
+        L4_L6 {
+            if-layers = <4 6>;
             then-layer = <6>;
         };
     };
