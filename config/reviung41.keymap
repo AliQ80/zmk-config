@@ -48,7 +48,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SLADTOGNUM";
             #binding-cells = <0>;
-            bindings = <&sl 6>, <&tog 6>;
+            bindings = <&sl 5>, <&tog 4>;
         };
 
         langcaps: langcaps {
