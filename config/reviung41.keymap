@@ -48,7 +48,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SLADTOGNUM";
             #binding-cells = <0>;
-            bindings = <&sl 5>, <&tog 3>;
+            bindings = <&sl 6>, <&tog 6>;
         };
 
         langcaps: langcaps {
@@ -383,7 +383,7 @@
 &kp ESC        &kp Q        &kp W        &kp F         &kp P            &kp B             &kp J  &kp L           &kp U         &kp Y        &kp SEMI     &kp SQT
 &kp BACKSPACE  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T     &kp G             &kp M  &hmr RSHIFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp RC(BACKSPACE)
 &kp TAB        &kp Z        &kp X        &kp C         &kp D            &kp V             &kp K  &kp H           &kp COMMA     &kp DOT      &kp FSLH     &kp ENTER
-                                         &SlAdTogNum   &mo_sk 3 LSHIFT         &kp SPACE         &mo_sk 4 RSHFT  &lang_lx
+                                         &SlAdTogNum   &mo_sk 6 LSHIFT         &kp SPACE         &mo_sk 5 RSHFT  &lang_lx
             >;
 
             label = "Default";
@@ -409,23 +409,6 @@
             >;
         };
 
-        lower_layer {
-            // ------------------------------------------------------------------------------------
-            // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      DEL    |
-            // |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |       ~     |
-            // |    | ESC | GUI | ALT | CAPS|  "  |   | HOME| END | PGUP| PGDN| PRSC| SHFT(SPACE) |
-            //                       |     |     | RET | ADJ |     |
-
-            bindings = <
-&trans  &kp EXCL         &kp AT          &kp HASH          &kp DLLR                  &kp PRCNT             &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp EQUAL
-&trans  &hml LGUI CARET  &hml LALT AMPS  &hml LCTRL COLON  &hml LSHFT DOUBLE_QUOTES  &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
-&trans  &none            &none           &none             &caps_word                &kp CAPS              &kp UNDER  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &none      &trans
-                                         &trans            &trans                               &kp SPACE             &kp NUMBER_0  &kp DOT
-            >;
-
-            label = "Lower";
-        };
-
         raise_layer {
             // --------------------------------------------------------------------------------------------
             // |    |  1  |  2  |  3  |  4  |  5  |   |        |   7   |   UP    |   9    |   0   |  DEL  |
@@ -441,6 +424,23 @@
             >;
 
             label = "Raise";
+        };
+
+        lower_layer {
+            // ------------------------------------------------------------------------------------
+            // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      DEL    |
+            // |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |       ~     |
+            // |    | ESC | GUI | ALT | CAPS|  "  |   | HOME| END | PGUP| PGDN| PRSC| SHFT(SPACE) |
+            //                       |     |     | RET | ADJ |     |
+
+            bindings = <
+&trans  &kp EXCL         &kp AT          &kp HASH          &kp DLLR                  &kp PRCNT             &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp EQUAL
+&trans  &hml LGUI CARET  &hml LALT AMPS  &hml LCTRL COLON  &hml LSHFT DOUBLE_QUOTES  &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
+&trans  &mo 5            &mo 6           &none             &caps_word                &kp CAPS              &kp UNDER  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &none      &trans
+                                         &trans            &trans                               &kp SPACE             &kp NUMBER_0  &kp DOT
+            >;
+
+            label = "Lower";
         };
 
         adjust_layer {
@@ -482,8 +482,8 @@
         compatible = "zmk,conditional-layers";
 
         L2_L3 {
-            if-layers = <3 4>;
-            then-layer = <5>;
+            if-layers = <6 5>;
+            then-layer = <6>;
         };
     };
 };
