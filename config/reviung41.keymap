@@ -380,8 +380,8 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp ESC        &kp Q        &kp W        &kp F         &kp P            &kp B             &kp J  &kp L           &kp U         &kp Y        &kp SEMI     &kp SQT
-&kp BACKSPACE  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T     &kp G             &kp M  &hmr RSHIFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp RC(BACKSPACE)
+&kp BACKSPACE  &kp Q        &kp W        &kp F         &kp P            &kp B             &kp J  &kp L           &kp U         &kp Y        &kp SEMI     &kp SQT
+&kp ESC        &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T     &kp G             &kp M  &hmr RSHIFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp RC(BACKSPACE)
 &kp TAB        &kp Z        &kp X        &kp C         &kp D            &kp V             &kp K  &kp H           &kp COMMA     &kp DOT      &kp FSLH     &kp ENTER
                                          &SlAdTogNum   &mo_sk 4 LSHIFT         &kp SPACE         &mo_sk 3 RSHFT  &lang_lx
             >;
@@ -417,10 +417,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp ESCAPE        &email    &none           &kp LEFT_BRACE               &kp RIGHT_BRACE               &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
-&kp LEFT_CONTROL  &kp LGUI  &kp LALT        &hml LCTRL LEFT_PARENTHESIS  &hml LSHFT RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &kp RA(BACKSPACE)
-&trans            &none     &kp C_AC_PRINT  &kp LEFT_BRACKET             &kp RIGHT_BRACKET             &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
-                                            &trans                       &trans                                   &kp BSPC               &trans        &trans
+&none   &email    &none           &kp LEFT_BRACE               &kp RIGHT_BRACE               &kp GRAVE            &speak       &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
+&trans  &kp LGUI  &kp LALT        &hml LCTRL LEFT_PARENTHESIS  &hml LSHFT RIGHT_PARENTHESIS  &kp BSLH             &kp HOME     &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &kp RA(BACKSPACE)
+&trans  &none     &kp C_AC_PRINT  &kp LEFT_BRACKET             &kp RIGHT_BRACKET             &kp TILDE            &arabic_mac  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
+                                  &trans                       &trans                                   &kp BSPC               &trans        &trans
             >;
 
             label = "Raise";
@@ -475,6 +475,15 @@
             >;
 
             label = "Function";
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans          &trans          &trans  &trans
+            >;
         };
     };
 
