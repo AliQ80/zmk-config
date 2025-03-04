@@ -9,8 +9,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -482,10 +480,10 @@
 
         layer_7 {
             bindings = <
-&none  &none  &none            &msc SCRL_UP    &none           &none         &none  &none           &mmv MOVE_UP    &none            &none  &none
-&none  &none  &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_LEFT  &none         &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
-&none  &none  &kp LCTRL        &mkp MCLK       &kp LSHFT       &none         &none  &mkp LCLK       &mkp RCLK       &none            &none  &none
-                               &none           &none                  &none         &none           &none
+&none      &none      &none            &msc SCRL_UP    &none           &none         &none  &none           &mmv MOVE_UP    &none            &none  &none
+&none      &none      &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_LEFT  &none         &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&kp LCTRL  &kp LSHFT  &mkp MB3         &mkp MB2        &mkp MB1        &none         &none  &none           &none           &none            &none  &none
+                                       &none           &none                  &none         &none           &none
             >;
         };
     };
