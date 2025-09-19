@@ -297,7 +297,7 @@
         lang_lx: lang_lx {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RG(SPACE)>, <&macro_wait_time 500>, <&tog 2>;
+            bindings = <&kp RC(SPACE)>, <&macro_wait_time 500>, <&tog 2>;
 
             label = "LANG_LX";
         };
