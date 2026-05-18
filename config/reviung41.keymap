@@ -12,6 +12,131 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+
+    macros {
+        email: email {
+            compatible = "zmk,behavior-macro";
+            label = "EMAIL";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp K &kp AT &kp A &kp L &kp I &kp K &kp A &kp R &kp A &kp M &kp DOT &kp C &kp O &kp M>;
+        };
+
+        speak: speak {
+            compatible = "zmk,behavior-macro";
+            label = "SPEAK";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp ESCAPE>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        scr_shot: scr_shot {
+            compatible = "zmk,behavior-macro";
+            label = "SCR_SHOT";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp RIGHT_GUI>,
+                <&macro_tap>,
+                <&kp N5>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp RIGHT_GUI>;
+        };
+
+        arabic_mac: arabic_mac {
+            compatible = "zmk,behavior-macro";
+            label = "ARABIC_MAC";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_wait_time 1000>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&tog 1>;
+        };
+
+        lang_lx: lang_lx {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(SPACE)>, <&macro_wait_time 500>, <&tog 2>;
+
+            label = "LANG_LX";
+        };
+
+        mc_bt0: mc_bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&rgb_ug RGB_TOG>,
+                <&macro_wait_time 500>,
+                <&bt BT_SEL 0>,
+                <&macro_wait_time 500>,
+                <&rgb_ug RGB_TOG>;
+
+            label = "MC_BT0";
+        };
+
+        mc_bt1: mc_bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&rgb_ug RGB_TOG>,
+                <&macro_wait_time 500>,
+                <&bt BT_SEL 1>,
+                <&macro_wait_time 500>,
+                <&rgb_ug RGB_TOG>;
+
+            label = "MC_BT1";
+        };
+
+        mc_bt2: mc_bt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&rgb_ug RGB_TOG>,
+                <&macro_wait_time 500>,
+                <&bt BT_SEL 2>,
+                <&macro_wait_time 500>,
+                <&rgb_ug RGB_TOG>;
+
+            label = "MC_BT2";
+        };
+
+        mc_bt3: mc_bt3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&rgb_ug RGB_TOG>,
+                <&macro_wait_time 500>,
+                <&bt BT_SEL 3>,
+                <&macro_wait_time 500>,
+                <&rgb_ug RGB_TOG>;
+
+            label = "MC_BT3";
+        };
+
+        mc_bt4: mc_bt4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&rgb_ug RGB_TOG>,
+                <&macro_wait_time 500>,
+                <&bt BT_SEL 4>,
+                <&macro_wait_time 500>,
+                <&rgb_ug RGB_TOG>;
+
+            label = "MC_BT4";
+        };
+    };
+
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -243,130 +368,6 @@
             label = "TD_LANG";
             #binding-cells = <0>;
             bindings = <&lang_lx>, <&arabic_mac>;
-        };
-    };
-
-    macros {
-        email: email {
-            compatible = "zmk,behavior-macro";
-            label = "EMAIL";
-            #binding-cells = <0>;
-            bindings = <&kp A &kp K &kp AT &kp A &kp L &kp I &kp K &kp A &kp R &kp A &kp M &kp DOT &kp C &kp O &kp M>;
-        };
-
-        speak: speak {
-            compatible = "zmk,behavior-macro";
-            label = "SPEAK";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp ESCAPE>,
-                <&macro_release>,
-                <&kp LALT>;
-        };
-
-        scr_shot: scr_shot {
-            compatible = "zmk,behavior-macro";
-            label = "SCR_SHOT";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT &kp RIGHT_GUI>,
-                <&macro_tap>,
-                <&kp N5>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT &kp RIGHT_GUI>;
-        };
-
-        arabic_mac: arabic_mac {
-            compatible = "zmk,behavior-macro";
-            label = "ARABIC_MAC";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&kp SPACE>,
-                <&macro_wait_time 1000>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&tog 1>;
-        };
-
-        lang_lx: lang_lx {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(SPACE)>, <&macro_wait_time 500>, <&tog 2>;
-
-            label = "LANG_LX";
-        };
-
-        mc_bt0: mc_bt0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&rgb_ug RGB_TOG>,
-                <&macro_wait_time 500>,
-                <&bt BT_SEL 0>,
-                <&macro_wait_time 500>,
-                <&rgb_ug RGB_TOG>;
-
-            label = "MC_BT0";
-        };
-
-        mc_bt1: mc_bt1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&rgb_ug RGB_TOG>,
-                <&macro_wait_time 500>,
-                <&bt BT_SEL 1>,
-                <&macro_wait_time 500>,
-                <&rgb_ug RGB_TOG>;
-
-            label = "MC_BT1";
-        };
-
-        mc_bt2: mc_bt2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&rgb_ug RGB_TOG>,
-                <&macro_wait_time 500>,
-                <&bt BT_SEL 2>,
-                <&macro_wait_time 500>,
-                <&rgb_ug RGB_TOG>;
-
-            label = "MC_BT2";
-        };
-
-        mc_bt3: mc_bt3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&rgb_ug RGB_TOG>,
-                <&macro_wait_time 500>,
-                <&bt BT_SEL 3>,
-                <&macro_wait_time 500>,
-                <&rgb_ug RGB_TOG>;
-
-            label = "MC_BT3";
-        };
-
-        mc_bt4: mc_bt4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&rgb_ug RGB_TOG>,
-                <&macro_wait_time 500>,
-                <&bt BT_SEL 4>,
-                <&macro_wait_time 500>,
-                <&rgb_ug RGB_TOG>;
-
-            label = "MC_BT4";
         };
     };
 
