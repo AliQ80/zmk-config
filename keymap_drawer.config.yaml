@@ -1,0 +1,75 @@
+draw_config:
+  glyph_tap_size: 14
+  glyph_hold_size: 12
+  dark_mode: true
+
+parse_config:
+  raw_binding_map:
+    # Mouse
+    '&mkp MB1': '🖱L'
+    '&mkp MB2': '🖱R'
+    '&mkp MB3': '🖱M'
+    '&msc SCRL_UP': 'WH↑'
+    '&msc SCRL_DOWN': 'WH↓'
+    '&msc SCRL_LEFT': 'WH←'
+    '&msc SCRL_RIGHT': 'WH→'
+    '&mmv MOVE_UP': 'MS↑'
+    '&mmv MOVE_DOWN': 'MS↓'
+    '&mmv MOVE_LEFT': 'MS←'
+    '&mmv MOVE_RIGHT': 'MS→'
+
+    # Media
+    '&kp C_VOL_UP': 'ᐱ🔊'
+    '&kp C_VOL_DN': 'ᐯ🔉'
+    '&kp C_MUTE': '🔇'
+    '&kp C_BRI_UP': 'ᐱ☀'
+    '&kp C_BRI_DN': 'ᐯ☀'
+    '&kp C_PP': '⏯'
+    '&kp C_PREV': '⏮'
+    '&kp C_NEXT': '⏭'
+
+    # Modifiers
+    '&kp ENTER': '⮐'
+    '&kp LSHFT': '⇧'
+    '&kp BSPC': '⌫'
+    '&kp SPACE': '␣'
+
+    # Custom behaviors
+    '&SlAdTogNum': 'ADJ/5'
+    '&langcaps': 'LANG/CW'
+    '&DEL_L1': '⌫ ^⌫ L1'
+    'ls_cw': '⇧ CW'
+    'rs_cw': '⇧ CW'
+
+    # Macros
+    '&email': '✉'
+    '&speak': '🎙'
+    '&scr_shot': '📸'
+    '&mc_vox': '🎙'
+    '&mac_lock': '🔒Mac'
+    '&win_lock': '🔒Win'
+
+    # Bluetooth (with RGB blink)
+    '&mc_bt0': 'ᛒ0'
+    '&mc_bt1': 'ᛒ1'
+    '&mc_bt2': 'ᛒ2'
+    '&mc_bt3': 'ᛒ3'
+    '&mc_bt4': 'ᛒ4'
+    '&bt BT_CLR': 'ᛒ✖'
+    '&bt BT_CLR_ALL': 'ᛒ⌫'
+
+    # RGB underglow
+    '&rgb_ug RGB_TOG': '💡'
+    '&rgb_ug RGB_BRI': '💡+'
+    '&rgb_ug RGB_BRD': '💡-'
+    '&rgb_ug RGB_HUI': '🎨+'
+    '&rgb_ug RGB_HUD': '🎨-'
+    '&rgb_ug RGB_SAI': '🌈+'
+    '&rgb_ug RGB_SAD': '🌈-'
+    '&rgb_ug RGB_EFF': '✨+'
+    '&rgb_ug RGB_EFR': '✨-'
+
+    # Power
+    '&ext_power EP_ON': '⚡ON'
+    '&ext_power EP_OFF': '⚡OFF'
+    '&soft_off': '💤'
