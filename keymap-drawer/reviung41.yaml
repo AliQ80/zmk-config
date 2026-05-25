@@ -1,0 +1,341 @@
+layout: {zmk_keyboard: reviung41}
+layers:
+  Default:
+  - BACKSPACE
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - ''''
+  - ESC
+  - {t: A, h: LALT}
+  - {t: R, h: LCTRL}
+  - {t: S, h: LGUI}
+  - {t: T, h: ⇧}
+  - G
+  - M
+  - {t: N, h: RSHIFT}
+  - {t: E, h: RGUI}
+  - {t: I, h: RCTRL}
+  - {t: O, h: RALT}
+  - Ctl+BACKSPACE
+  - TAB
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - ⮐
+  - ADJ/5
+  - {t: LSHIFT, h: Lower}
+  - ␣
+  - {t: RSHFT, h: Raise}
+  - '7'
+  Arabic:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - ']'
+  - {t: ▽, type: trans}
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHIFT}
+  - G
+  - H
+  - {t: J, h: RSHIFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RALT}
+  - {t: ;, h: RGUI}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ␣
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  arabic_mac:
+  - Q
+  - W
+  - {t: E, s: A}
+  - {t: R, s: S}
+  - {t: T, s: E}
+  - {t: Y, s: R}
+  - {t: U, s: X}
+  - {t: I, s: '`'}
+  - O
+  - P
+  - '['
+  - M
+  - {t: ▽, type: trans}
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: ⇧}
+  - G
+  - {t: H, s: N}
+  - {t: J, h: RSHFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RCTRL}
+  - {t: ;, h: RGUI}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - /
+  - {t: '''', s: N}
+  - {t: '`', s: Z}
+  - {t: ']', s: X}
+  - {t: ., s: H}
+  - {t: V, s: Y}
+  - {t: ',', s: C}
+  - Sft+K
+  - Sft+.
+  - {t: Sft+L, s: '?'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Raise:
+  - ''
+  - ✉
+  - ''
+  - '{'
+  - '}'
+  - '`'
+  - 🎙
+  - 📸
+  - UP
+  - ''
+  - PAGE UP
+  - DEL
+  - {t: ▽, type: trans}
+  - LGUI
+  - LALT
+  - {t: (, h: LCTRL}
+  - {t: ), h: ⇧}
+  - \
+  - HOME
+  - LEFT
+  - DOWN
+  - RIGHT
+  - END
+  - AltGr+BACKSPACE
+  - {t: ▽, type: trans}
+  - ''
+  - AC PRINT
+  - '['
+  - ']'
+  - '~'
+  - '&td_lang'
+  - ᐯ🔉
+  - ᐱ🔊
+  - 🔇
+  - PAGE DOWN
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⌫
+  - {type: held}
+  - {t: ▽, type: trans}
+  Lower:
+  - {t: ▽, type: trans}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - /
+  - '7'
+  - '8'
+  - '9'
+  - '-'
+  - '='
+  - {t: ▽, type: trans}
+  - {t: ^, h: LGUI}
+  - {t: '&', h: LALT}
+  - {t: ':', h: LCTRL}
+  - {t: '"', h: ⇧}
+  - '|'
+  - '*'
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Adjust
+  - Function
+  - Gui+Ctl+X
+  - '&caps_word'
+  - CAPS
+  - _
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ␣
+  - '0'
+  - .
+  Adjust:
+  - 💡+
+  - 🌈+
+  - 🎨+
+  - ✨+
+  - ''
+  - 💡
+  - ᛒ0
+  - ᛒ1
+  - ᛒ2
+  - ᛒ3
+  - ᛒ4
+  - ᛒ✖
+  - 💡-
+  - 🌈-
+  - 🎨-
+  - ✨-
+  - ''
+  - ''
+  - ''
+  - ⚡ON
+  - ⚡OFF
+  - 💤
+  - ''
+  - ''
+  - ''
+  - {t: Adjust, type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Function:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F9
+  - F10
+  - F11
+  - F12
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F5
+  - F6
+  - F7
+  - F8
+  - ''
+  - ''
+  - ''
+  - {t: Function, type: held}
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  '7':
+  - ''
+  - ''
+  - ''
+  - WH↑
+  - ''
+  - ''
+  - ''
+  - ''
+  - MS↑
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - WH→
+  - WH↓
+  - WH←
+  - ''
+  - ''
+  - MS←
+  - MS↓
+  - MS→
+  - ''
+  - ''
+  - LCTRL
+  - ⇧
+  - 🖱M
+  - 🖱R
+  - 🖱L
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+combos:
+- p: [40, 36]
+  k: {t: Arabic, h: toggle}
