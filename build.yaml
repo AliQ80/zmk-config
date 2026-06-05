@@ -13,5 +13,20 @@
 #
 ---
 include:
+  # Dongle with Prospector operator screen
+  - board: xiao_ble//zmk
+    shield: reviung41_dongle prospector_adapter
+    artifact-name: reviung41_dongle_firmware
+  # Dongle settings reset
+  - board: xiao_ble//zmk
+    shield: settings_reset
+    artifact-name: settings_reset_dongle
+  # Reviung41 as peripheral
   - board: nice_nano_v2
     shield: reviung41
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: reviung41_keyboard_firmware
+  # Keyboard settings reset
+  - board: nice_nano_v2
+    shield: settings_reset
+    artifact-name: settings_reset_keyboard

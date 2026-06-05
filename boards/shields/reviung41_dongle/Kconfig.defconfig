@@ -1,0 +1,23 @@
+if SHIELD_REVIUNG41_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Reviung41"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+# Single unibody peripheral (ZMK default is already 1, set explicitly for clarity)
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 1
+
+# 1 peripheral + 5 BT profiles = 6 total connections
+config BT_MAX_CONN
+    default 6
+
+config BT_MAX_PAIRED
+    default 6
+
+endif
