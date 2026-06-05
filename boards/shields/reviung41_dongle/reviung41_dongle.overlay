@@ -1,5 +1,9 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
+&uicr {
+    nfct-pins-as-gpios;
+};
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
