@@ -384,6 +384,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "0. Colemak-DH";
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -401,6 +402,7 @@
         };
 
         arabic_layer {
+            display-name = "1. Arabic";
             bindings = <
 &kp Q   &kp W       &kp E       &kp R        &kp T         &kp Y             &kp U  &kp I         &kp O        &kp P       &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G             &kp H  &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI     &trans
@@ -412,6 +414,7 @@
         };
 
         arabic_mac {
+            display-name = "2. Arabic Mac";
             bindings = <
 &kp Q   &kp W        &E_thaa      &R_qaf        &T_faa        &Y_ghain          &U_ain   &I_haa        &kp O         &kp P         &kp LBKT        &kp M
 &trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &G_lam            &H_alif  &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
@@ -421,6 +424,7 @@
         };
 
         raise_layer {
+            display-name = "3. Symbols";
             // --------------------------------------------------------------------------------------------
             // |    |  1  |  2  |  3  |  4  |  5  |   |        |   7   |   UP    |   9    |   0   |  DEL  |
             // |    |  -  |  =  |  [  |  ]  |  \  |   |  HOME  |  LFT  |   DWN   |  RGT   |  END  |  F6   |
@@ -438,6 +442,7 @@
         };
 
         lower_layer {
+            display-name = "4. Numbers";
             // ------------------------------------------------------------------------------------
             // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      DEL    |
             // |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |       ~     |
@@ -455,6 +460,7 @@
         };
 
         adjust_layer {
+            display-name = "5. Adjust";
             // ---------------------------------------------------------------------------------------------------------
             // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
             // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |       |     |     |     |     |        |
@@ -472,6 +478,7 @@
         };
 
         function_layer {
+            display-name = "6. Function";
             // ---------------------------------------------------------------------------------------------------------
             // |  | F1 | F2  | F3  |  F4   |     |          |     |     |   |   |   |   |
             // |  | F5 | F6  | F7  |  F8   |     |          |     |     |   |   |   |   |
@@ -489,6 +496,7 @@
         };
 
         layer_7 {
+            display-name = "7. Mouse";
             bindings = <
 &none      &none      &none            &msc SCRL_UP    &none           &none         &none  &none           &mmv MOVE_UP    &none            &none  &none
 &none      &none      &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_LEFT  &none         &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
