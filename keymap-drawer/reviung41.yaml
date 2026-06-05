@@ -41,7 +41,7 @@ layers:
   - {t: LSHIFT, h: Lower}
   - ␣
   - {t: RSHFT, h: Raise}
-  - '7'
+  - 7. Mouse
   Arabic:
   - Q
   - W
@@ -84,7 +84,7 @@ layers:
   - ␣
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  arabic_mac:
+  2. Arabic Mac:
   - Q
   - W
   - {t: E, s: A}
@@ -294,7 +294,7 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '7':
+  7. Mouse:
   - ''
   - ''
   - ''

@@ -312,8 +312,10 @@ path.combo { stroke: #7f7f7f; }
 </a></g>
 <g transform="translate(543, 206)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#x_x">
-<text x="0" y="0" class="key tap layer-activator">7</text>
+<a href="#Mouse">
+<text x="0" y="0" class="key tap layer-activator">
+<tspan x="0" dy="-0.6em">7.</tspan><tspan x="0" dy="1.2em">Mouse</tspan>
+</text>
 </a></g>
 <g class="combo combopos-0">
 <path d="M365,206 l159,0" class="combo"/>
@@ -510,8 +512,8 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(30, 665)" class="layer-arabic_mac">
-<text x="0" y="28" class="label" id="arabic_mac">arabic_mac:</text>
+<g transform="translate(30, 665)" class="layer-2. Arabic Mac">
+<text x="0" y="28" class="label" id="Arabic-Mac">2. Arabic Mac:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(52, 34) rotate(-350.0)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -923,9 +925,8 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(455, 52) rotate(-10.0)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#x_x">
-<text x="0" y="0" class="key tap layer-activator">7</text>
-</a></g>
+<text x="0" y="0" class="key tap">7</text>
+</g>
 <g transform="translate(508, 32) rotate(-10.0)" class="key keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">8</text>
@@ -1387,8 +1388,8 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(30, 2328)" class="layer-7">
-<text x="0" y="28" class="label" id="x_x">7:</text>
+<g transform="translate(30, 2328)" class="layer-7. Mouse">
+<text x="0" y="28" class="label" id="Mouse">7. Mouse:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(52, 34) rotate(-350.0)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
