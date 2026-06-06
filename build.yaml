@@ -16,7 +16,6 @@ include:
   # Dongle with Prospector operator screen
   - board: xiao_ble//zmk
     shield: reviung41_dongle prospector_adapter
-    cmake-args: -DEXTRA_CFLAGS="-DPERIPHERAL_COUNT=1 -DZMK_SPLIT_BLE_PERIPHERAL_COUNT=CONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS"
     artifact-name: reviung41_dongle_firmware
   # Dongle settings reset
   - board: xiao_ble//zmk
@@ -25,7 +24,7 @@ include:
   # Reviung41 as peripheral
   - board: nice_nano//zmk
     shield: reviung41
-    cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=y -DCONFIG_ZMK_POINTING=y
+    cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=y -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: reviung41_keyboard_firmware
   # Keyboard settings reset
   - board: nice_nano//zmk
