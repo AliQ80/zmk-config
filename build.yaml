@@ -16,7 +16,7 @@ include:
   # Dongle with Prospector operator screen
   - board: xiao_ble//zmk
     shield: reviung41_dongle prospector_adapter
-    cmake-args: -DEXTRA_CFLAGS=-DPERIPHERAL_COUNT=1
+    cmake-args: -DEXTRA_CFLAGS="-DPERIPHERAL_COUNT=1 -DZMK_SPLIT_BLE_PERIPHERAL_COUNT=CONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS"
     artifact-name: reviung41_dongle_firmware
   # Dongle settings reset
   - board: xiao_ble//zmk
