@@ -24,7 +24,7 @@ include:
   # Reviung41 as peripheral
   - board: nice_nano//zmk
     shield: reviung41
-    cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=y -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=n -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_SPLIT_BLE_ROLE_PERIPHERAL=y
     artifact-name: reviung41_keyboard_firmware
   # Keyboard settings reset
   - board: nice_nano//zmk
