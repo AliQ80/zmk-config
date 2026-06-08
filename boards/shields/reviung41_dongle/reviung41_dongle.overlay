@@ -1,14 +1,9 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <layouts/gtips/reviung41.dtsi>
-
-&gtips_reviung41_layout {
-    transform = <&default_transform>;
-};
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &gtips_reviung41_layout;
+        zmk,physical-layout = &physical_layout0;
     };
 
     mock_kscan: mock_kscan_0 {
@@ -16,6 +11,12 @@
         columns = <0>;
         rows = <0>;
         events = <0>;
+    };
+
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
     };
 
     default_transform: keymap_transform_0 {
