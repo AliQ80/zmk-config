@@ -1,0 +1,19 @@
+// config/reviung41.overlay
+// Because ZMK GitHub Actions automatically applies <shield>.overlay files, 
+// this will be injected into your unibody Reviung41 to optimize it for peripheral mode.
+
+/ {
+    chosen {
+        /* The peripheral only needs to know how to scan keys. */
+        /* It will use the default kscan0 defined in the Reviung41 shield. */
+        zmk,kscan = &kscan0;
+    };
+};
+
+/* Disable the RGB LED strip at the hardware level.
+   Since this is now a peripheral, the central dongle handles RGB logic.
+   Attempting to boot the LED strip driver on the peripheral without 
+   a central to govern it can cause RTOS lockups and drains the battery. */
+&led_strip {
+    status = "disabled";
+};
