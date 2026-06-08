@@ -8,11 +8,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-
     macros {
         email: email {
             compatible = "zmk,behavior-macro";
@@ -385,6 +385,7 @@
 
         default_layer {
             display-name = "0. Colemak";
+
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -425,6 +426,7 @@
 
         raise_layer {
             display-name = "3. Symbols";
+
             // --------------------------------------------------------------------------------------------
             // |    |  1  |  2  |  3  |  4  |  5  |   |        |   7   |   UP    |   9    |   0   |  DEL  |
             // |    |  -  |  =  |  [  |  ]  |  \  |   |  HOME  |  LFT  |   DWN   |  RGT   |  END  |  F6   |
@@ -443,6 +445,7 @@
 
         lower_layer {
             display-name = "4. Numbers";
+
             // ------------------------------------------------------------------------------------
             // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      DEL    |
             // |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |       ~     |
@@ -461,6 +464,7 @@
 
         adjust_layer {
             display-name = "5. Adjust";
+
             // ---------------------------------------------------------------------------------------------------------
             // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
             // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |       |     |     |     |     |        |
@@ -470,7 +474,7 @@
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &mc_bt0  &mc_bt1           &mc_bt2            &mc_bt3    &mc_bt4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none    &ext_power EP_ON  &ext_power EP_OFF  &soft_off  &none    &none
-&none            &mo 5            &none            &none            &none   &none                   &none    &none             &none              &none      &none    &none
+&none            &mo 5            &none            &none            &none   &none                   &none    &out OUT_TOG      &none              &none      &none    &none
                                                    &trans           &trans                   &none           &trans            &trans
             >;
 
@@ -479,6 +483,7 @@
 
         function_layer {
             display-name = "6. Function";
+
             // ---------------------------------------------------------------------------------------------------------
             // |  | F1 | F2  | F3  |  F4   |     |          |     |     |   |   |   |   |
             // |  | F5 | F6  | F7  |  F8   |     |          |     |     |   |   |   |   |
