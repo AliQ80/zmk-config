@@ -16,7 +16,8 @@ include:
   # Dongle with Prospector operator screen
   - board: xiao_ble//zmk
     shield: reviung41_dongle prospector_adapter
-    cmake-args: -DCONFIG_ZMK_POINTING=y
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_STUDIO=y
     artifact-name: reviung41_dongle_firmware
   # Dongle settings reset
   - board: xiao_ble//zmk
