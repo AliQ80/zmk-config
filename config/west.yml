@@ -1,6 +1,4 @@
 manifest:
-  defaults:
-    revision: main
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -9,10 +7,10 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
+      revision: main
       import: app/west.yml
     - name: prospector-zmk-module
       remote: carrefinho
       revision: feat/new-status-screens
-      import: false
   self:
     path: config
