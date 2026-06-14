@@ -393,9 +393,9 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp BACKSPACE  &kp Q        &kp W         &kp F        &kp P            &kp B             &kp J  &kp L           &kp U        &kp Y         &kp SEMI     &kp SQT
-&kp ESC        &hml LALT A  &hml LCTRL R  &hml LGUI S  &hml LSHFT T     &kp G             &kp M  &hmr RSHIFT N   &hmr RGUI E  &hmr RCTRL I  &hmr RALT O  &kp RC(BACKSPACE)
-&kp TAB        &kp Z        &kp X         &kp C        &kp D            &kp V             &kp K  &kp H           &kp COMMA    &kp DOT       &kp FSLH     &kp ENTER
+&kp BACKSPACE  &kp Q         &kp W        &kp F        &kp P            &kp B             &kp J  &kp L           &kp U        &kp Y        &kp SEMI      &kp SQT
+&kp ESC        &hml LCTRL A  &hml LALT R  &hml LGUI S  &hml LSHFT T     &kp G             &kp M  &hmr RSHIFT N   &hmr RGUI E  &hmr RALT I  &hmr RCTRL O  &kp RC(BACKSPACE)
+&kp TAB        &kp Z         &kp X        &kp C        &kp D            &kp V             &kp K  &kp H           &kp COMMA    &kp DOT      &kp FSLH      &kp ENTER
                                           &SlAdTogNum  &mo_sk 4 LSHIFT         &kp SPACE         &mo_sk 3 RSHFT  &mo 7
             >;
 
@@ -405,10 +405,10 @@
         arabic_layer {
             display-name = "1. Arabic";
             bindings = <
-&kp Q   &kp W       &kp E       &kp R        &kp T         &kp Y             &kp U  &kp I         &kp O        &kp P       &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G             &kp H  &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI     &trans
-&trans  &kp Z       &kp X       &kp C        &kp V         &kp B             &kp N  &kp M         &kp COMMA    &kp DOT     &kp FSLH          &trans
-                                &trans       &trans               &kp SPACE         &trans        &trans
+&kp Q   &kp W        &kp E       &kp R       &kp T         &kp Y             &kp U  &kp I         &kp O       &kp P       &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHIFT F  &kp G             &kp H  &hm RSHIFT J  &hm RGUI K  &hm RALT L  &hm RCTRL SEMI    &trans
+&trans  &kp Z        &kp X       &kp C       &kp V         &kp B             &kp N  &kp M         &kp COMMA   &kp DOT     &kp FSLH          &trans
+                                 &trans      &trans               &kp SPACE         &trans        &trans
             >;
 
             label = "Arabic";
@@ -417,10 +417,10 @@
         arabic_mac {
             display-name = "2. Arabic Mac";
             bindings = <
-&kp Q   &kp W        &E_thaa      &R_qaf        &T_faa        &Y_ghain          &U_ain   &I_haa        &kp O         &kp P         &kp LBKT        &kp M
-&trans  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &G_lam            &H_alif  &hmr RSHFT J  &hmr RCTRL K  &hmr RCTRL L  &hmr RGUI SEMI  &trans
-&trans  &slsh_thah   &quo_tah     &grv_thal     &rbrkt_dal    &dot_zai          &V_raa   &coma_wow     &kp RS(K)     &kp RS(DOT)   &slash_qmark    &trans
-                                  &trans        &trans                  &trans           &trans        &trans
+&kp Q   &kp W         &E_thaa      &R_qaf       &T_faa        &Y_ghain          &U_ain   &I_haa        &kp O        &kp P        &kp LBKT         &kp M
+&trans  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &G_lam            &H_alif  &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI  &trans
+&trans  &slsh_thah    &quo_tah     &grv_thal    &rbrkt_dal    &dot_zai          &V_raa   &coma_wow     &kp RS(K)    &kp RS(DOT)  &slash_qmark     &trans
+                                   &trans       &trans                  &trans           &trans        &trans
             >;
         };
 
@@ -434,10 +434,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none   &email    &none           &kp LEFT_BRACE               &kp RIGHT_BRACE               &kp GRAVE            &speak    &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
-&trans  &kp LGUI  &kp LALT        &hml LCTRL LEFT_PARENTHESIS  &hml LSHFT RIGHT_PARENTHESIS  &kp BSLH             &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &kp RA(BACKSPACE)
-&trans  &none     &kp C_AC_PRINT  &kp LEFT_BRACKET             &kp RIGHT_BRACKET             &kp TILDE            &td_lang  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
-                                  &trans                       &trans                                   &kp BSPC            &trans        &trans
+&none   &email     &none           &kp LEFT_BRACE              &kp RIGHT_BRACE               &kp GRAVE            &speak    &scr_shot     &kp UP        &none       &kp PAGE_UP    &kp DEL
+&trans  &kp LCTRL  &kp LALT        &hml LGUI LEFT_PARENTHESIS  &hml LSHFT RIGHT_PARENTHESIS  &kp BSLH             &kp HOME  &kp LEFT      &kp DOWN      &kp RIGHT   &kp END        &kp RA(BACKSPACE)
+&trans  &none      &kp C_AC_PRINT  &kp LEFT_BRACKET            &kp RIGHT_BRACKET             &kp TILDE            &td_lang  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp PAGE_DOWN  &none
+                                   &trans                      &trans                                   &kp BSPC            &trans        &trans
             >;
 
             label = "Raise";
@@ -453,10 +453,10 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-&trans  &kp EXCL         &kp AT          &kp HASH          &kp DLLR                  &kp PRCNT             &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp EQUAL
-&trans  &hml LGUI CARET  &hml LALT AMPS  &hml LCTRL COLON  &hml LSHFT DOUBLE_QUOTES  &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
-&trans  &mo 5            &mo 6           &kp LG(LC(X))     &caps_word                &kp CAPS              &kp UNDER  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &none      &trans
-                                         &trans            &trans                               &kp SPACE             &kp NUMBER_0  &kp DOT
+&trans  &kp EXCL          &kp AT          &kp HASH         &kp DLLR                  &kp PRCNT             &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp EQUAL
+&trans  &hml LCTRL CARET  &hml LALT AMPS  &hml LGUI COLON  &hml LSHFT DOUBLE_QUOTES  &kp PIPE              &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
+&trans  &mo 5             &mo 6           &kp LG(LC(X))    &caps_word                &kp CAPS              &kp UNDER  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &none      &trans
+                                          &trans           &trans                               &kp SPACE             &kp NUMBER_0  &kp DOT
             >;
 
             label = "Lower";
@@ -472,10 +472,10 @@
             //                                           |     |     |     |     |     |
 
             bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &mc_bt0  &mc_bt1           &mc_bt2            &mc_bt3    &mc_bt4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none    &ext_power EP_ON  &ext_power EP_OFF  &soft_off  &none    &none
-&none  &mo 5            &none            &none            &none   &none                   &studio_unlock  &out OUT_TOG      &none              &none      &none    &none
-                                                   &trans           &trans                   &none           &trans            &trans
+&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &mc_bt0         &mc_bt1           &mc_bt2            &mc_bt3    &mc_bt4  &bt BT_CLR
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none           &ext_power EP_ON  &ext_power EP_OFF  &soft_off  &none    &none
+&none            &mo 5            &none            &none            &none   &none                   &studio_unlock  &out OUT_TOG      &none              &none      &none    &none
+                                                   &trans           &trans                   &none                  &trans            &trans
             >;
 
             label = "Adjust";
@@ -500,7 +500,7 @@
             label = "Function";
         };
 
-        layer_7 {
+        mouse_layer {
             display-name = "7. Mouse";
             bindings = <
 &none      &none      &none            &msc SCRL_UP    &none           &none         &none  &none           &mmv MOVE_UP    &none            &none  &none
