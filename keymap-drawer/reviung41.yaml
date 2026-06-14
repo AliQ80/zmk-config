@@ -243,8 +243,8 @@ layers:
   - ''
   - '&studio_unlock'
   - OUT TOG
-  - ''
-  - ''
+  - OUT USB
+  - OUT BLE
   - ''
   - ''
   - {t: ▽, type: trans}
