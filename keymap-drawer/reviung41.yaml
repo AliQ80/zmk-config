@@ -14,16 +14,16 @@ layers:
   - ;
   - ''''
   - ESC
-  - {t: A, h: LALT}
-  - {t: R, h: LCTRL}
+  - {t: A, h: LCTRL}
+  - {t: R, h: LALT}
   - {t: S, h: LGUI}
   - {t: T, h: ⇧}
   - G
   - M
   - {t: N, h: RSHIFT}
   - {t: E, h: RGUI}
-  - {t: I, h: RCTRL}
-  - {t: O, h: RALT}
+  - {t: I, h: RALT}
+  - {t: O, h: RCTRL}
   - Ctl+BACKSPACE
   - TAB
   - Z
@@ -56,16 +56,16 @@ layers:
   - '['
   - ']'
   - {t: ▽, type: trans}
-  - {t: A, h: LGUI}
+  - {t: A, h: LCTRL}
   - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
+  - {t: D, h: LGUI}
   - {t: F, h: LSHIFT}
   - G
   - H
   - {t: J, h: RSHIFT}
-  - {t: K, h: RCTRL}
+  - {t: K, h: RGUI}
   - {t: L, h: RALT}
-  - {t: ;, h: RGUI}
+  - {t: ;, h: RCTRL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Z
@@ -98,16 +98,16 @@ layers:
   - '['
   - M
   - {t: ▽, type: trans}
-  - {t: A, h: LGUI}
+  - {t: A, h: LCTRL}
   - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
+  - {t: D, h: LGUI}
   - {t: F, h: ⇧}
   - G
   - {t: H, s: N}
   - {t: J, h: RSHFT}
-  - {t: K, h: RCTRL}
-  - {t: L, h: RCTRL}
-  - {t: ;, h: RGUI}
+  - {t: K, h: RGUI}
+  - {t: L, h: RALT}
+  - {t: ;, h: RCTRL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - /
@@ -140,9 +140,9 @@ layers:
   - PAGE UP
   - DEL
   - {t: ▽, type: trans}
-  - LGUI
+  - LCTRL
   - LALT
-  - {t: (, h: LCTRL}
+  - {t: (, h: LGUI}
   - {t: ), h: ⇧}
   - \
   - HOME
@@ -182,9 +182,9 @@ layers:
   - '-'
   - '='
   - {t: ▽, type: trans}
-  - {t: ^, h: LGUI}
+  - {t: ^, h: LCTRL}
   - {t: '&', h: LALT}
-  - {t: ':', h: LCTRL}
+  - {t: ':', h: LGUI}
   - {t: '"', h: ⇧}
   - '|'
   - '*'
